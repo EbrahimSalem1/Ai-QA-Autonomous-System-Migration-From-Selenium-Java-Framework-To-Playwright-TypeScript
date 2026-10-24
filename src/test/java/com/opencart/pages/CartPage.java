@@ -3,6 +3,7 @@ package com.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartPage extends BasePage {
 
@@ -15,6 +16,7 @@ public class CartPage extends BasePage {
     public CartPage open() {
         openRoute("checkout/cart");
         visible(PAGE_HEADING);
+        waitForAjax(); // the cart list is re-rendered by AJAX after load
         return this;
     }
 
@@ -38,6 +40,7 @@ public class CartPage extends BasePage {
     public void updateQuantity(String product, int quantity) {
         type(quantityInput(product), String.valueOf(quantity));
         click(By.xpath("//div[@id='shopping-cart']//tbody/tr[.//a[normalize-space()=" + xpathLiteral(product) + "]]//button[@title='Update']"));
+        waitForAjax();
     }
 
     public void remove(String product) {
@@ -46,5 +49,6 @@ public class CartPage extends BasePage {
 
     public void proceedToCheckout() {
         click(CHECKOUT_BUTTON);
+        wait.until(ExpectedConditions.urlContains("route=checkout/checkout"));
     }
 }

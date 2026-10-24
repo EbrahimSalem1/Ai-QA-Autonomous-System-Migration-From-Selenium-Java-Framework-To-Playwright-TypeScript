@@ -10,8 +10,8 @@ public class HeaderComponent extends BasePage {
 
     private static final By SEARCH_INPUT = By.cssSelector("header input[name='search']");
     private static final By SEARCH_BUTTON = By.cssSelector("header input[name='search'] + button");
-    private static final By ACCOUNT_MENU = By.xpath("//div[@id='top']//span[contains(@class,'dropdown-toggle')][contains(normalize-space(),'My Account')]");
-    private static final By MY_ACCOUNT_LINK = By.xpath("//div[@id='top']//ul[contains(@class,'dropdown-menu')]//a[normalize-space()='My Account']");
+    private static final By ACCOUNT_MENU = By.xpath("//*[@id='top']//span[contains(@class,'dropdown-toggle')][contains(normalize-space(),'My Account')]");
+    private static final By MY_ACCOUNT_LINK = By.xpath("//*[@id='top']//ul[contains(@class,'dropdown-menu')]//a[normalize-space()='My Account']");
     private static final By LOGOUT_LINK = By.cssSelector("#top .dropdown-menu a[href*='account/logout']");
     private static final By WISH_LIST_LINK = By.id("wishlist-total");
 

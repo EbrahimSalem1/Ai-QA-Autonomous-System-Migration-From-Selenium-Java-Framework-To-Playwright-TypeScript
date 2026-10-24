@@ -10,7 +10,6 @@ public class ComparePage extends BasePage {
 
     /** Product names sit in the first data row; one column per product. */
     private static final By PRODUCT_NAMES = By.cssSelector("#product-compare table tbody tr td a strong");
-    private static final By REMOVE_BUTTONS = By.cssSelector("#product-compare a.btn-danger");
 
     public ComparePage(WebDriver driver) {
         super(driver);
@@ -31,8 +30,6 @@ public class ComparePage extends BasePage {
         if (column < 0) {
             throw new IllegalArgumentException(product + " is not in the comparison: " + productNames());
         }
-        WebElement removeButton = driver.findElements(REMOVE_BUTTONS).get(column);
-        scrollIntoView(removeButton);
-        removeButton.click();
+        click(By.xpath("(//div[@id='product-compare']//a[contains(@class,'btn-danger')])[" + (column + 1) + "]"));
     }
 }
