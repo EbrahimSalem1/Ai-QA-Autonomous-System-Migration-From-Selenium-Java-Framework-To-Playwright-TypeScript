@@ -124,6 +124,14 @@
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
                 <version>${cucumber.reporting.version}</version>
+                <dependencies>
+                    <!-- 5.11.0 uses commons-configuration2 bean support but does not ship commons-beanutils -->
+                    <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils</artifactId>
+                        <version>1.9.4</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>module-report</id>
