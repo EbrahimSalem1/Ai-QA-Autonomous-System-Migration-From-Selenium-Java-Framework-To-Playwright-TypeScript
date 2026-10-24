@@ -1,0 +1,5 @@
+field	message
+First Name	First Name must be between 1 and 32 characters!
+Last Name	Last Name must be between 1 and 32 characters!
+E-Mail	E-Mail Address does not appear to be valid!
+Password	Password must

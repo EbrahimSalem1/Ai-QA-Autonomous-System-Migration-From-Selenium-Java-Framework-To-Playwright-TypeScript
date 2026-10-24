@@ -1,0 +1,1 @@
+https://demo.opencart.com/index.php?route=product/compare&language=en-gb
