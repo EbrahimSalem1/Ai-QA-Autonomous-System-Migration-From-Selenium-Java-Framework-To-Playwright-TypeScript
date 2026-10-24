@@ -1,0 +1,10 @@
+node_modules/
+.features-gen/
+test-results/
+playwright-report/
+reports/
+.auth/
+.env
+.DS_Store
+.idea/
+.vscode/

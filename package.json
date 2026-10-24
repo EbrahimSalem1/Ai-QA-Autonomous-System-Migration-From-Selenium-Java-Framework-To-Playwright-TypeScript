@@ -1,0 +1,42 @@
+{
+  "name": "opencart-playwright-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript + Cucumber BDD framework for demo.opencart.com, migrated from Selenium/Java with the QA Autonomous System",
+  "type": "commonjs",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:smoke": "bddgen && playwright test --grep @smoke",
+    "test:module": "bddgen && playwright test --grep",
+    "test:headed": "bddgen && playwright test --headed",
+    "test:cross-browser": "bddgen && CROSS_BROWSER=1 playwright test",
+    "report": "playwright show-report reports/playwright-html",
+    "report:modules": "tsx scripts/module-report.ts",
+    "jira:story": "tsx scripts/jira-story.ts",
+    "jira:publish": "tsx scripts/jira-publish-results.ts",
+    "lint": "eslint .",
+    "typecheck": "bddgen && tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run lint && npm run typecheck && npm run format:check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.13.0",
+    "eslint-plugin-playwright": "^2.12.1",
+    "playwright-bdd": "^9.2.1",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0"
+  }
+}

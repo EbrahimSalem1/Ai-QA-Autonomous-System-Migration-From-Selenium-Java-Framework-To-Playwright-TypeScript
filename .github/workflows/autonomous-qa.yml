@@ -1,0 +1,51 @@
+# QA Autonomous System in CI: Jira story key in → pull request with the automated scenarios out.
+# Optional — requires the ANTHROPIC_API_KEY, JIRA_EMAIL and JIRA_API_TOKEN repository secrets.
+name: Autonomous QA (Jira story → PR)
+
+on:
+  workflow_dispatch:
+    inputs:
+      story:
+        description: 'Jira story key, e.g. IB-17'
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  automate-story:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      BASE_URL: http://localhost:8080
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: .github/scripts/start-opencart.sh 4.1.0.4 8080
+      - run: npx playwright install --with-deps chromium
+
+      - name: Pull the story from Jira
+        env:
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: npx tsx scripts/jira-story.ts "${{ inputs.story }}"
+
+      - name: Claude automates the story
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are the QA Autonomous System for this repository. Follow CLAUDE.md.
+            Story: specs/jira/${{ inputs.story }}.md (store under test: http://localhost:8080).
+            1. Use the jira-story-analysis skill to update the module feature file.
+            2. Use the playwright-test-planner agent from tests/seed.spec.ts to write specs/<module>.plan.md.
+            3. Use the playwright-bdd-implementation skill (generator agent for locators) to implement missing steps.
+            4. Run `npx playwright test --grep @${{ inputs.story }}`; use the playwright-test-healer agent on failures.
+            5. Run `npm run verify`, then open a pull request titled "${{ inputs.story }}: automated scenarios".
+          claude_args: '--mcp-config .mcp.json --max-turns 80'

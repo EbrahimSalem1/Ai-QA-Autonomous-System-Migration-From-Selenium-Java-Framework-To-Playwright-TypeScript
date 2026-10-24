@@ -1,0 +1,147 @@
+name: Playwright BDD
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  schedule:
+    - cron: '17 1 * * *' # nightly regression + cross-browser smoke
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'local = OpenCart provisioned on the runner, demo = demo.opencart.com (Cloudflare may block CI browsers)'
+        type: choice
+        options: [local, demo]
+        default: local
+      grep:
+        description: 'Optional tag filter, e.g. @cart or @smoke'
+        default: ''
+
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  BASE_URL: ${{ (inputs.target == 'demo') && 'https://demo.opencart.com' || 'http://localhost:8080' }}
+  OPENCART_EMAIL: ${{ secrets.OPENCART_EMAIL }}
+  OPENCART_PASSWORD: ${{ secrets.OPENCART_PASSWORD }}
+
+jobs:
+  quality:
+    name: Quality gate (lint · typecheck · format)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run format:check
+
+  e2e:
+    name: BDD scenarios (chromium + auth)
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Provision OpenCart store
+        if: env.BASE_URL == 'http://localhost:8080'
+        run: .github/scripts/start-opencart.sh 4.1.0.4 8080
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run scenarios
+        id: tests
+        continue-on-error: true
+        run: |
+          npx bddgen
+          npx playwright test --project=setup --project=chromium --project=chromium-auth ${{ inputs.grep && format('--grep "{0}"', inputs.grep) || '' }}
+
+      - name: Per-module report
+        if: always()
+        run: npx tsx scripts/module-report.ts reports/cucumber/cucumber-report.json reports/modules
+
+      - name: Allure report
+        if: always()
+        run: npx --yes allure-commandline@2 generate reports/allure-results -o reports/allure-report --clean || echo "no allure results"
+
+      - name: Upload reports
+        if: always()
+        continue-on-error: true # artifact storage quota must never fail the pipeline; reports are also on gh-pages
+        uses: actions/upload-artifact@v5
+        with:
+          name: playwright-reports-${{ github.run_number }}
+          path: |
+            reports/
+            test-results/
+          retention-days: 7
+
+      - name: Publish reports to gh-pages
+        if: always() && github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: reports
+          destination_dir: playwright
+          keep_files: false
+          exclude_assets: 'allure-results'
+
+      - name: Publish results to Jira stories
+        if: always() && github.event_name != 'pull_request'
+        env:
+          JIRA_BASE_URL: https://ebrasalem93.atlassian.net
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: npx tsx scripts/jira-publish-results.ts
+
+      - name: Fail if any scenario failed
+        if: steps.tests.outcome == 'failure'
+        run: |
+          echo "::error::Some scenarios failed — see the module summary and the Playwright report on gh-pages."
+          exit 1
+
+  cross-browser:
+    name: Smoke (${{ matrix.project }})
+    needs: quality
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: firefox-smoke
+            browser: firefox
+          - project: webkit-smoke
+            browser: webkit
+    env:
+      CROSS_BROWSER: '1'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Provision OpenCart store
+        if: env.BASE_URL == 'http://localhost:8080'
+        run: .github/scripts/start-opencart.sh 4.1.0.4 8080
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npx bddgen && npx playwright test --project=${{ matrix.project }}
