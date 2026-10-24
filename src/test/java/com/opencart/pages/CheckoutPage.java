@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-import java.time.Duration;
 
 /**
  * OpenCart 4 one-page checkout. Sections are rendered by AJAX, so every step waits for the
@@ -34,7 +33,8 @@ public class CheckoutPage extends BasePage {
     private static final By SELECTED_PAYMENT = By.id("input-payment-method");
 
     private static final By AGREE_TERMS = By.id("input-checkout-agree");
-    private static final By CONFIRM_ORDER = By.id("button-confirm");
+    /** Rendered disabled (without an id) until shipping, payment and terms are complete, then as #button-confirm. */
+    private static final By CONFIRM_ORDER = By.xpath("//div[@id='checkout-confirm']//button[normalize-space()='Confirm Order']");
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -63,6 +63,7 @@ public class CheckoutPage extends BasePage {
         fillAddressIfShown("shipping", customer, address);
         click(REGISTER_CONTINUE);
         visible(GUEST_DETAILS_SAVED);
+        waitForAjax();
     }
 
     private void fillAddressIfShown(String type, Customer customer, Address address) {
@@ -103,23 +104,25 @@ public class CheckoutPage extends BasePage {
         // Markup: <input type="radio" id="..."/> <label for="...">Flat Shipping Rate - $5.00</label>
         By option = By.xpath("//div[@id='" + modalId + "']//label[contains(normalize-space(), " + xpathLiteral(optionLabel)
                 + ")]/preceding-sibling::input[@type='radio']");
+        visible(option);
         setChecked(option, true);
         click(continueButton);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(modal));
+        waitForAjax();
     }
 
+    /** Shown only when the store assigns a Terms page to checkout (demo.opencart.com and the CI store do). */
     public void agreeToTerms() {
         setChecked(AGREE_TERMS, true);
+        waitForAjax();
     }
 
     public void confirmOrder() {
         click(CONFIRM_ORDER);
     }
 
-    /** Clicks Confirm Order only if the store renders it; used by negative scenarios. */
-    public void tryConfirmOrder() {
-        if (isDisplayedWithin(CONFIRM_ORDER, Duration.ofSeconds(5))) {
-            click(CONFIRM_ORDER);
-        }
+    public boolean isConfirmEnabled() {
+        waitForAjax();
+        return visible(CONFIRM_ORDER).isEnabled();
     }
 }

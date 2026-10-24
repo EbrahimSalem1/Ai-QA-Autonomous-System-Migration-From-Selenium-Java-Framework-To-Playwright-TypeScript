@@ -1,5 +1,6 @@
 package com.opencart.pages;
 
+import com.opencart.pages.components.HeaderComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,8 +10,10 @@ public class WishlistPage extends BasePage {
         super(driver);
     }
 
+    /** Opens My Wishlist through the header link (the link carries the customer_token). */
     public WishlistPage open() {
-        openRoute("account/wishlist");
+        new HomePage(driver).open();
+        new HeaderComponent(driver).openWishList();
         visible(PAGE_HEADING);
         return this;
     }

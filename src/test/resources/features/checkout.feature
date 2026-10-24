@@ -28,11 +28,12 @@ Feature: Checkout
     Then the page heading is "Shopping Cart"
     And I see the message "Your shopping cart is empty!"
 
-  Scenario: Terms and conditions must be accepted
+  Scenario: The order cannot be confirmed until the terms and conditions are accepted
     Given I have added "iPhone" to the shopping cart
     When I proceed to checkout
     And I check out as a guest with valid personal details and address
     And I choose the shipping method "Flat Shipping Rate"
     And I choose the payment method "Cash On Delivery"
-    And I try to confirm the order
-    Then I see the warning "Warning: You must agree to the Terms & Conditions!"
+    Then the order cannot be confirmed
+    When I agree to the terms and conditions
+    Then the order can be confirmed

@@ -59,19 +59,24 @@ public class Hooks {
         context.setCustomer(AuthSessionStore.customer());
     }
 
+    /**
+     * OpenCart keeps sessions in the database without locking, so a background request that started before the
+     * registration finished can write the session back without the login. The shared account is therefore always
+     * finished with an explicit login, verified on My Account, before its cookies are saved.
+     */
     private void createAuthenticatedSession(WebDriver driver) {
         TestDataFactory.Customer customer = AuthSessionStore.configuredCustomer().orElse(null);
-        if (customer != null) {
-            context.page(LoginPage.class).open().login(customer.email(), customer.password());
-            if (!context.page(AccountPage.class).isLoaded()) {
-                throw new IllegalStateException("Login with the configured customer failed: " + context.page(CurrentPage.class).currentMessages());
-            }
-        } else {
+        if (customer == null) {
             customer = TestDataFactory.newCustomer();
             context.page(RegisterPage.class).open().register(customer);
             if (!context.page(CurrentPage.class).showsText("Your Account Has Been Created!")) {
                 throw new IllegalStateException("Registering the shared @auth customer failed: " + context.page(CurrentPage.class).currentMessages());
             }
+            driver.manage().deleteAllCookies();
+        }
+        context.page(LoginPage.class).open().login(customer.email(), customer.password());
+        if (!context.page(AccountPage.class).isLoaded()) {
+            throw new IllegalStateException("Login of the shared @auth customer failed: " + context.page(CurrentPage.class).currentMessages());
         }
         Set<Cookie> cookies = driver.manage().getCookies();
         AuthSessionStore.save(customer, cookies);

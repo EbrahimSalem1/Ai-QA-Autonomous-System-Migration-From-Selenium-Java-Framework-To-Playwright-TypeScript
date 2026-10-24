@@ -52,9 +52,14 @@ public class CheckoutSteps {
         context.page(CheckoutPage.class).confirmOrder();
     }
 
-    @When("I try to confirm the order")
-    public void iTryToConfirmTheOrder() {
-        context.page(CheckoutPage.class).tryConfirmOrder();
+    @Then("the order cannot be confirmed")
+    public void theOrderCannotBeConfirmed() {
+        assertThat(context.page(CheckoutPage.class).isConfirmEnabled()).as("Confirm Order enabled").isFalse();
+    }
+
+    @Then("the order can be confirmed")
+    public void theOrderCanBeConfirmed() {
+        assertThat(context.page(CheckoutPage.class).isConfirmEnabled()).as("Confirm Order enabled").isTrue();
     }
 
     @Then("the guest checkout option is not offered")

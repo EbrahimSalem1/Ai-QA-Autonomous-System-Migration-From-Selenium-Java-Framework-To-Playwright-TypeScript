@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class ProductPage extends BasePage {
 
-    private static final By PRICE = By.cssSelector("#content .price-new");
+    /** The column holding the product heading; related-product cards repeat the same buttons elsewhere. */
+    private static final String SUMMARY = "#content .col-sm:has(> h1)";
+    private static final By PRICE = By.cssSelector(SUMMARY + " .price-new");
     private static final By QUANTITY = By.id("input-quantity");
     private static final By ADD_TO_CART = By.id("button-cart");
     private static final By DESCRIPTION_TAB = By.cssSelector("a[href='#tab-description']");
@@ -16,7 +18,7 @@ public class ProductPage extends BasePage {
     }
 
     private static By actionButton(String title) {
-        return By.cssSelector("#content button[title=\"" + title + "\"]");
+        return By.cssSelector(SUMMARY + " button[title=\"" + title + "\"]");
     }
 
     public ProductPage waitUntilLoaded() {

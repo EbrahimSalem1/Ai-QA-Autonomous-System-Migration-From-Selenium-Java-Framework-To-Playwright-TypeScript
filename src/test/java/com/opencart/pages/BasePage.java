@@ -23,7 +23,8 @@ import java.util.List;
 public abstract class BasePage {
 
     protected static final By PAGE_HEADING = By.cssSelector("#content h1");
-    protected static final By MESSAGE_AREAS = By.cssSelector("#alert, #content");
+    /** Where OpenCart prints messages: the AJAX alert container, the main content and page-level alerts. */
+    protected static final By MESSAGE_AREAS = By.cssSelector("#alert, #content, .alert");
 
     protected final WebDriver driver;
     protected final WebDriverWait wait;
@@ -91,6 +92,15 @@ public abstract class BasePage {
         } catch (TimeoutException e) {
             return false;
         }
+    }
+
+    /**
+     * OpenCart reloads other page sections by jQuery AJAX after each save and its database session is not
+     * locked, so the next action must wait until those requests have finished (Selenium has no network-idle).
+     */
+    protected void waitForAjax() {
+        wait.until(d -> (Boolean) ((JavascriptExecutor) d)
+                .executeScript("return !window.jQuery || window.jQuery.active === 0;"));
     }
 
     protected void scrollIntoView(WebElement element) {

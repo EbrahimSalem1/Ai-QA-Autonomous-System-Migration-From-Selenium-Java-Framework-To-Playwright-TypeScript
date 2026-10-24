@@ -7,6 +7,11 @@ on:
     branches: [selenium-java-framework]
   workflow_dispatch:
     inputs:
+      target:
+        description: "local = OpenCart provisioned on the runner, demo = demo.opencart.com (Cloudflare may block CI browsers)"
+        type: choice
+        options: [local, demo]
+        default: local
       tags:
         description: "Cucumber tag expression"
         default: "not @ignore"
@@ -20,27 +25,30 @@ concurrency:
 
 permissions:
   contents: write
-  checks: write
 
 jobs:
   test:
-    name: Cucumber scenarios (${{ inputs.browser || 'chrome' }})
-    runs-on: ubuntu-latest
+    name: Cucumber scenarios (${{ inputs.browser || 'chrome' }}, ${{ inputs.target || 'local' }})
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       BROWSER: ${{ inputs.browser || 'chrome' }}
       HEADLESS: "true"
-      BASE_URL: ${{ vars.BASE_URL || 'https://demo.opencart.com' }}
+      BASE_URL: ${{ (inputs.target == 'demo') && 'https://demo.opencart.com' || 'http://localhost:8080' }}
       CUSTOMER_EMAIL: ${{ secrets.OPENCART_EMAIL }}
       CUSTOMER_PASSWORD: ${{ secrets.OPENCART_PASSWORD }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "21"
           cache: maven
+
+      - name: Provision OpenCart store
+        if: env.BASE_URL == 'http://localhost:8080'
+        run: .github/scripts/start-opencart.sh 4.1.0.4 8080
 
       - name: Compile
         run: mvn -B -ntp test-compile
@@ -54,19 +62,19 @@ jobs:
 
       - name: Allure report
         if: always()
-        run: |
-          npx --yes allure-commandline@2 generate target/allure-results -o target/allure-report --clean || echo "no allure results"
+        run: npx --yes allure-commandline@2 generate target/allure-results -o target/allure-report --clean || echo "no allure results"
 
       - name: Upload reports
         if: always()
-        uses: actions/upload-artifact@v4
+        continue-on-error: true # artifact storage quota must never fail the pipeline; reports are also on gh-pages
+        uses: actions/upload-artifact@v5
         with:
           name: selenium-reports-${{ github.run_number }}
           path: |
             target/cucumber
             target/cucumber-html-reports
             target/allure-report
-          retention-days: 14
+          retention-days: 7
 
       - name: Publish reports to gh-pages
         if: always() && github.event_name != 'pull_request'
@@ -76,7 +84,7 @@ jobs:
           publish_branch: gh-pages
           publish_dir: target
           destination_dir: selenium
-          keep_files: true
+          keep_files: false
           exclude_assets: "classes,test-classes,generated-test-sources,maven-status,surefire-reports,maven-archiver,*.jar"
 
       - name: Fail the job if any scenario failed

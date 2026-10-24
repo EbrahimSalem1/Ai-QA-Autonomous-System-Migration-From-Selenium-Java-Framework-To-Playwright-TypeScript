@@ -43,18 +43,33 @@ src/test/resources
 └── testng.xml
 ```
 
+## Target store
+
+`demo.opencart.com` is protected by a Cloudflare bot check that blocks automated browsers coming from CI
+runners, so the pipeline provisions its own OpenCart 4.1 store on the runner
+(`.github/scripts/start-opencart.sh`: MySQL + PHP built-in server, demo catalogue, Terms & Conditions at checkout
+like the demo site) and runs against `http://localhost:8080`. Run the workflow manually with `target=demo` to
+aim at the public demo instead.
+
 ## Run
 
 ```bash
 mvn verify                                             # all scenarios, 4 threads, headless Chrome
 mvn verify -Dcucumber.filter.tags="@cart or @search"   # by module
 mvn verify -Dcucumber.filter.tags="@smoke" -Dheadless=false -Dbrowser=firefox
-BASE_URL=http://localhost:8080 mvn verify              # any OpenCart 4 instance
+BASE_URL=http://localhost:8080 mvn verify              # any OpenCart 4 instance (e.g. the CI store)
 ```
 
 `@auth` scenarios share one logged-in session per run: the account is registered once (or the
-`CUSTOMER_EMAIL` / `CUSTOMER_PASSWORD` account is used) and its cookies are injected into each
+`CUSTOMER_EMAIL` / `CUSTOMER_PASSWORD` account is used), logged in, and its cookies are injected into each
 scenario — the Selenium counterpart of Playwright's `storageState`.
+
+Two OpenCart 4 behaviours the framework deliberately handles:
+
+* Account pages require a per-session `customer_token` in the URL; opening `route=account/...` directly logs the
+  customer out. Page objects reach My Account and My Wishlist through the header links, which carry the token.
+* Sessions are stored in the database without locking, so the checkout waits for jQuery AJAX to finish
+  (`BasePage.waitForAjax`) between steps instead of racing the section reloads.
 
 ## Reports
 
