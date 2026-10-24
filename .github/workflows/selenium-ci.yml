@@ -54,7 +54,11 @@ jobs:
         run: mvn -B -ntp test-compile
 
       - name: Run scenarios and build reports
-        run: mvn -B -ntp verify -Dcucumber.filter.tags="${{ inputs.tags || 'not @ignore' }}" -Dthreads=4
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p target
+          mvn -B -ntp verify -Dcucumber.filter.tags="${{ inputs.tags || 'not @ignore' }}" -Dthreads=4 2>&1 | tee target/maven-build.log
 
       - name: Module summary
         if: always()
