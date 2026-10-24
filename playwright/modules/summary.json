@@ -1,0 +1,383 @@
+{
+  "generatedAt": "2026-10-24T09:50:02.605Z",
+  "target": "http://localhost:8080",
+  "runUrl": "https://github.com/EbrahimSalem1/Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript-using-the-QA-Autonomous-System/actions/runs/40083364403",
+  "totals": {
+    "passed": 29,
+    "failed": 0,
+    "skipped": 0,
+    "scenarios": 29,
+    "durationMs": 166313
+  },
+  "modules": [
+    {
+      "module": "Checkout",
+      "tag": "@checkout",
+      "jira": "IB-20",
+      "feature": "checkout.feature",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 41351,
+      "scenarios": [
+        {
+          "name": "Checkout with an empty cart returns to the shopping cart",
+          "status": "passed",
+          "durationMs": 1923,
+          "tags": [
+            "@checkout",
+            "@IB-20"
+          ]
+        },
+        {
+          "name": "The order cannot be confirmed until the terms and conditions are accepted",
+          "status": "passed",
+          "durationMs": 15815,
+          "tags": [
+            "@checkout",
+            "@IB-20"
+          ]
+        },
+        {
+          "name": "Guest checkout places an order",
+          "status": "passed",
+          "durationMs": 16425,
+          "tags": [
+            "@checkout",
+            "@IB-20",
+            "@smoke",
+            "@e2e"
+          ]
+        },
+        {
+          "name": "A logged-in customer reaches checkout without the account step",
+          "status": "passed",
+          "durationMs": 7188,
+          "tags": [
+            "@checkout",
+            "@IB-20",
+            "@auth"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Customer login and logout",
+      "tag": "@login",
+      "jira": "IB-14",
+      "feature": "login.feature",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 26343,
+      "scenarios": [
+        {
+          "name": "Login with valid credentials",
+          "status": "passed",
+          "durationMs": 8086,
+          "tags": [
+            "@login",
+            "@IB-14",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "Login is rejected for an unregistered e-mail",
+          "status": "passed",
+          "durationMs": 1828,
+          "tags": [
+            "@login",
+            "@IB-14"
+          ]
+        },
+        {
+          "name": "Login is rejected for a wrong password",
+          "status": "passed",
+          "durationMs": 7491,
+          "tags": [
+            "@login",
+            "@IB-14"
+          ]
+        },
+        {
+          "name": "Logout from the account",
+          "status": "passed",
+          "durationMs": 8938,
+          "tags": [
+            "@login",
+            "@IB-14"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Product compare",
+      "tag": "@compare",
+      "jira": "IB-19",
+      "feature": "product-compare.feature",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 26377,
+      "scenarios": [
+        {
+          "name": "Add a product to the comparison",
+          "status": "passed",
+          "durationMs": 3907,
+          "tags": [
+            "@compare",
+            "@IB-19",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "An empty comparison shows an empty message",
+          "status": "passed",
+          "durationMs": 913,
+          "tags": [
+            "@compare",
+            "@IB-19"
+          ]
+        },
+        {
+          "name": "Compare two products side by side",
+          "status": "passed",
+          "durationMs": 11157,
+          "tags": [
+            "@compare",
+            "@IB-19"
+          ]
+        },
+        {
+          "name": "Remove a product from the comparison",
+          "status": "passed",
+          "durationMs": 10400,
+          "tags": [
+            "@compare",
+            "@IB-19"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Product details page",
+      "tag": "@product",
+      "jira": "IB-16",
+      "feature": "product-details.feature",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 12471,
+      "scenarios": [
+        {
+          "name": "Product information is shown",
+          "status": "passed",
+          "durationMs": 4335,
+          "tags": [
+            "@product",
+            "@IB-16",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "Add a product to the cart with a chosen quantity",
+          "status": "passed",
+          "durationMs": 4291,
+          "tags": [
+            "@product",
+            "@IB-16"
+          ]
+        },
+        {
+          "name": "Wish list and compare actions are available",
+          "status": "passed",
+          "durationMs": 3845,
+          "tags": [
+            "@product",
+            "@IB-16"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Customer registration",
+      "tag": "@registration",
+      "jira": "IB-13",
+      "feature": "registration.feature",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 14491,
+      "scenarios": [
+        {
+          "name": "Register a new account with valid details",
+          "status": "passed",
+          "durationMs": 3653,
+          "tags": [
+            "@registration",
+            "@IB-13",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "Registration requires accepting the privacy policy",
+          "status": "passed",
+          "durationMs": 1973,
+          "tags": [
+            "@registration",
+            "@IB-13"
+          ]
+        },
+        {
+          "name": "Mandatory registration fields are validated",
+          "status": "passed",
+          "durationMs": 1441,
+          "tags": [
+            "@registration",
+            "@IB-13"
+          ]
+        },
+        {
+          "name": "Registration is rejected for an e-mail that is already registered",
+          "status": "passed",
+          "durationMs": 7424,
+          "tags": [
+            "@registration",
+            "@IB-13"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Product search",
+      "tag": "@search",
+      "jira": "IB-15",
+      "feature": "search.feature",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 7868,
+      "scenarios": [
+        {
+          "name": "Search for an existing product",
+          "status": "passed",
+          "durationMs": 2418,
+          "tags": [
+            "@search",
+            "@IB-15",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "A partial keyword returns every matching product",
+          "status": "passed",
+          "durationMs": 2788,
+          "tags": [
+            "@search",
+            "@IB-15"
+          ]
+        },
+        {
+          "name": "Search for a product that does not exist",
+          "status": "passed",
+          "durationMs": 2662,
+          "tags": [
+            "@search",
+            "@IB-15"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Shopping cart",
+      "tag": "@cart",
+      "jira": "IB-17",
+      "feature": "shopping-cart.feature",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 18335,
+      "scenarios": [
+        {
+          "name": "An empty cart shows an empty message",
+          "status": "passed",
+          "durationMs": 1374,
+          "tags": [
+            "@cart",
+            "@IB-17"
+          ]
+        },
+        {
+          "name": "An added product appears in the cart",
+          "status": "passed",
+          "durationMs": 5044,
+          "tags": [
+            "@cart",
+            "@IB-17",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "Update the quantity of a product in the cart",
+          "status": "passed",
+          "durationMs": 5967,
+          "tags": [
+            "@cart",
+            "@IB-17"
+          ]
+        },
+        {
+          "name": "Remove a product from the cart",
+          "status": "passed",
+          "durationMs": 5950,
+          "tags": [
+            "@cart",
+            "@IB-17"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Wish list",
+      "tag": "@wishlist",
+      "jira": "IB-18",
+      "feature": "wishlist.feature",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 19077,
+      "scenarios": [
+        {
+          "name": "A guest is asked to log in before saving to the wish list",
+          "status": "passed",
+          "durationMs": 3020,
+          "tags": [
+            "@wishlist",
+            "@IB-18"
+          ]
+        },
+        {
+          "name": "Add a product to the wish list",
+          "status": "passed",
+          "durationMs": 7136,
+          "tags": [
+            "@wishlist",
+            "@IB-18",
+            "@auth",
+            "@smoke"
+          ]
+        },
+        {
+          "name": "Remove a product from the wish list",
+          "status": "passed",
+          "durationMs": 8921,
+          "tags": [
+            "@wishlist",
+            "@IB-18",
+            "@auth"
+          ]
+        }
+      ]
+    }
+  ]
+}
