@@ -1,0 +1,325 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.opencart:opencart-selenium-bdd >-----------------
+[INFO] Building OpenCart Selenium Java Cucumber BDD Framework 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24219 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ opencart-selenium-bdd ---
+[INFO] skip non existing resourceDirectory /home/runner/work/Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript-using-the-QA-Autonomous-System/Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript-using-the-QA-Autonomous-System/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ opencart-selenium-bdd ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ opencart-selenium-bdd ---
+[INFO] Copying 13 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ opencart-selenium-bdd ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ opencart-selenium-bdd ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[WARNING] System property [cucumber.filter.tags] overwritten by user properties from Maven session
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+
+@checkout @IB-20 @smoke @e2e
+Scenario: Guest checkout places an order                               # src/test/resources/features/checkout.feature:8
+
+@checkout @IB-20
+Scenario: Checkout with an empty cart returns to the shopping cart # src/test/resources/features/checkout.feature:26
+
+@checkout @IB-20
+Scenario: The order cannot be confirmed until the terms and conditions are accepted # src/test/resources/features/checkout.feature:31
+09:51:55.868 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Guest checkout places an order [@checkout, @IB-20, @smoke, @e2e]
+09:51:55.871 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Checkout with an empty cart returns to the shopping cart [@checkout, @IB-20]
+09:51:55.871 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: The order cannot be confirmed until the terms and conditions are accepted [@checkout, @IB-20]
+
+@checkout @IB-20 @auth
+Scenario: A logged-in customer reaches checkout without the account step # src/test/resources/features/checkout.feature:19
+09:51:55.879 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: A logged-in customer reaches checkout without the account step [@checkout, @IB-20, @auth]
+  ✔ When I open the checkout page                                  # com.opencart.stepdefinitions.CheckoutSteps.iOpenTheCheckoutPage()
+  ✔ Then the page heading is "Shopping Cart"                       # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+  ✔ And I see the message "Your shopping cart is empty!"           # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@login @IB-14 @smoke
+Scenario: Login with valid credentials        # src/test/resources/features/login.feature:8
+09:52:03.127 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Login with valid credentials [@login, @IB-14, @smoke]
+  ✔ Given I have added "iPhone" to the shopping cart                   # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+  ✔ Given I have added "iPhone" to the shopping cart                                # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+  ✔ Given I am a registered customer          # com.opencart.stepdefinitions.LoginSteps.iAmARegisteredCustomer()
+  ✔ When I proceed to checkout                                                      # com.opencart.stepdefinitions.CheckoutSteps.iProceedToCheckout()
+  ✔ And I am on the Account Login page        # com.opencart.stepdefinitions.LoginSteps.iAmOnTheAccountLoginPage()
+  ✔ When I proceed to checkout                                         # com.opencart.stepdefinitions.CheckoutSteps.iProceedToCheckout()
+09:52:13.236 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Saved authenticated session for qa.myriam.041c6f8c@example.com
+  ✔ When I log in with my e-mail and password # com.opencart.stepdefinitions.LoginSteps.iLogInWithMyEmailAndPassword()
+  ✔ Then the page heading is "My Account"     # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+
+@login @IB-14
+Scenario: Login is rejected for a wrong password                                   # src/test/resources/features/login.feature:14
+09:52:14.953 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Login is rejected for a wrong password [@login, @IB-14]
+  ✔ Given I am logged in                                                 # com.opencart.stepdefinitions.WishlistSteps.iAmLoggedIn()
+  ✔ And I check out as a guest with valid personal details and address              # com.opencart.stepdefinitions.CheckoutSteps.iCheckOutAsAGuest()
+  ✔ And I check out as a guest with valid personal details and address # com.opencart.stepdefinitions.CheckoutSteps.iCheckOutAsAGuest()
+  ✔ And I choose the shipping method "Flat Shipping Rate"                           # com.opencart.stepdefinitions.CheckoutSteps.iChooseTheShippingMethod(java.lang.String)
+  ✔ Given I am a registered customer                                               # com.opencart.stepdefinitions.LoginSteps.iAmARegisteredCustomer()
+  ✔ And I am on the Account Login page                                             # com.opencart.stepdefinitions.LoginSteps.iAmOnTheAccountLoginPage()
+  ✔ And I choose the shipping method "Flat Shipping Rate"              # com.opencart.stepdefinitions.CheckoutSteps.iChooseTheShippingMethod(java.lang.String)
+  ✔ And I have added "MacBook" to the shopping cart                      # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+  ✔ When I log in with my e-mail and the password "WrongPass#123"                  # com.opencart.stepdefinitions.LoginSteps.iLogInWithMyEmailAndThePassword(java.lang.String)
+  ✔ And I choose the payment method "Cash On Delivery"                              # com.opencart.stepdefinitions.CheckoutSteps.iChooseThePaymentMethod(java.lang.String)
+  ✔ And I agree to the terms and conditions                            # com.opencart.stepdefinitions.CheckoutSteps.iAgreeToTheTermsAndConditions()
+  ✔ Then the order cannot be confirmed                                              # com.opencart.stepdefinitions.CheckoutSteps.theOrderCannotBeConfirmed()
+  ✔ Then I see the warning "Warning: No match for E-Mail Address and/or Password." # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ When I agree to the terms and conditions                                        # com.opencart.stepdefinitions.CheckoutSteps.iAgreeToTheTermsAndConditions()
+
+@login @IB-14
+Scenario: Login is rejected for an unregistered e-mail                             # src/test/resources/features/login.feature:20
+09:52:23.581 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Login is rejected for an unregistered e-mail [@login, @IB-14]
+  ✔ Then the order can be confirmed                                                 # com.opencart.stepdefinitions.CheckoutSteps.theOrderCanBeConfirmed()
+
+@login @IB-14
+Scenario: Logout from the account             # src/test/resources/features/login.feature:25
+09:52:24.099 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: Logout from the account [@login, @IB-14]
+  ✔ When I proceed to checkout                                           # com.opencart.stepdefinitions.CheckoutSteps.iProceedToCheckout()
+  ✔ Then the page heading is "Checkout"                                  # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+  ✔ And the guest checkout option is not offered                         # com.opencart.stepdefinitions.CheckoutSteps.theGuestCheckoutOptionIsNotOffered()
+
+@compare @IB-19 @smoke
+Scenario: Add a product to the comparison                                                       # src/test/resources/features/product-compare.feature:8
+09:52:25.167 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: Add a product to the comparison [@compare, @IB-19, @smoke]
+  ✔ And I choose the payment method "Cash On Delivery"                 # com.opencart.stepdefinitions.CheckoutSteps.iChooseThePaymentMethod(java.lang.String)
+  ✔ And I confirm the order                                            # com.opencart.stepdefinitions.CheckoutSteps.iConfirmTheOrder()
+  ✔ Given I am on the Account Login page                                           # com.opencart.stepdefinitions.LoginSteps.iAmOnTheAccountLoginPage()
+  ✔ Then the page heading is "Your order has been placed!"             # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+  ✔ When I log in with an unregistered e-mail                                      # com.opencart.stepdefinitions.LoginSteps.iLogInWithAnUnregisteredEmail()
+
+@compare @IB-19
+Scenario: Compare two products side by side                      # src/test/resources/features/product-compare.feature:13
+09:52:29.132 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Compare two products side by side [@compare, @IB-19]
+  ✔ Then I see the warning "Warning: No match for E-Mail Address and/or Password." # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@compare @IB-19
+Scenario: Remove a product from the comparison                                           # src/test/resources/features/product-compare.feature:22
+09:52:29.701 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Remove a product from the comparison [@compare, @IB-19]
+  ✔ Given I am on the product page of "iPhone"                                                  # com.opencart.stepdefinitions.ProductSteps.iAmOnTheProductPageOf(java.lang.String)
+  ✔ When I add the product to the comparison                                                    # com.opencart.stepdefinitions.CompareSteps.iAddTheProductToTheComparison()
+  ✔ Then I see the success message "Success: You have added iPhone to your product comparison!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ Given I am a registered customer          # com.opencart.stepdefinitions.LoginSteps.iAmARegisteredCustomer()
+
+@compare @IB-19
+Scenario: An empty comparison shows an empty message                      # src/test/resources/features/product-compare.feature:33
+09:52:33.580 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: An empty comparison shows an empty message [@compare, @IB-19]
+  ✔ And I am on the Account Login page        # com.opencart.stepdefinitions.LoginSteps.iAmOnTheAccountLoginPage()
+  ✔ And I log in with my e-mail and password  # com.opencart.stepdefinitions.LoginSteps.iLogInWithMyEmailAndPassword()
+  ✔ When I open the product comparison page                               # com.opencart.stepdefinitions.CompareSteps.iOpenTheProductComparisonPage()
+  ✔ Then I see the message "You have not chosen any products to compare." # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@product @IB-16 @smoke
+Scenario: Product information is shown                              # src/test/resources/features/product-details.feature:8
+09:52:37.462 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: Product information is shown [@product, @IB-16, @smoke]
+  ✔ When I log out                            # com.opencart.stepdefinitions.LoginSteps.iLogOut()
+  ✔ Then the page heading is "Account Logout" # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+
+@product @IB-16
+Scenario: Add a product to the cart with a chosen quantity                                 # src/test/resources/features/product-details.feature:17
+09:52:40.419 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: Add a product to the cart with a chosen quantity [@product, @IB-16]
+  ✔ Given I am on the home page                                     # com.opencart.stepdefinitions.CommonSteps.iAmOnTheHomePage()
+  ✔ Given I have added the following products to the comparison: # com.opencart.stepdefinitions.CompareSteps.iHaveAddedProductsToTheComparison(java.util.List)
+      | iPhone  |
+      | MacBook |
+  ✔ When I search for "MacBook"                                     # com.opencart.stepdefinitions.SearchSteps.iSearchFor(java.lang.String)
+  ✔ Given I have added the following products to the comparison:                         # com.opencart.stepdefinitions.CompareSteps.iHaveAddedProductsToTheComparison(java.util.List)
+      | iPhone  |
+      | MacBook |
+  ✔ When I open the product comparison page                      # com.opencart.stepdefinitions.CompareSteps.iOpenTheProductComparisonPage()
+  ✔ Then the product comparison contains:                        # com.opencart.stepdefinitions.CompareSteps.theProductComparisonContains(java.util.List)
+      | iPhone  |
+      | MacBook |
+
+@product @IB-16
+Scenario: Wish list and compare actions are available                            # src/test/resources/features/product-details.feature:22
+09:52:44.561 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Wish list and compare actions are available [@product, @IB-16]
+  ✔ And I open the product comparison page                                               # com.opencart.stepdefinitions.CompareSteps.iOpenTheProductComparisonPage()
+  ✔ When I remove "iPhone" from the comparison                                           # com.opencart.stepdefinitions.CompareSteps.iRemoveFromTheComparison(java.lang.String)
+  ✔ And I open the product "MacBook"                                # com.opencart.stepdefinitions.ProductSteps.iOpenTheProduct(java.lang.String)
+  ✔ Then the product heading is "MacBook"                           # com.opencart.stepdefinitions.ProductSteps.theProductHeadingIs(java.lang.String)
+  ✔ Then I see the success message "Success: You have modified your product comparison!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ And the product comparison contains:                                                 # com.opencart.stepdefinitions.CompareSteps.theProductComparisonContains(java.util.List)
+      | MacBook |
+  ✔ And the product comparison does not contain "iPhone"                                 # com.opencart.stepdefinitions.CompareSteps.theProductComparisonDoesNotContain(java.lang.String)
+  ✔ And the product price is displayed                              # com.opencart.stepdefinitions.ProductSteps.theProductPriceIsDisplayed()
+
+@registration @IB-13 @smoke
+Scenario: Register a new account with valid details                  # src/test/resources/features/registration.feature:8
+09:52:46.645 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Register a new account with valid details [@registration, @IB-13, @smoke]
+  ✔ Given I am on the product page of "iPhone"                                             # com.opencart.stepdefinitions.ProductSteps.iAmOnTheProductPageOf(java.lang.String)
+  ✔ When I set the quantity to 2 and add the product to the cart                           # com.opencart.stepdefinitions.ProductSteps.iSetTheQuantityAndAddToCart(int)
+  ✔ Then I see the success message "Success: You have added iPhone to your shopping cart!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@registration @IB-13
+Scenario: Registration is rejected for an e-mail that is already registered # src/test/resources/features/registration.feature:13
+09:52:49.200 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: Registration is rejected for an e-mail that is already registered [@registration, @IB-13]
+  ✔ Given I am on the Register Account page                          # com.opencart.stepdefinitions.RegistrationSteps.iAmOnTheRegisterAccountPage()
+  ✔ And the quantity field and the Add to Cart button are displayed # com.opencart.stepdefinitions.ProductSteps.theQuantityAndAddToCartAreDisplayed()
+  ✔ Given I am on the product page of "iPhone"                                   # com.opencart.stepdefinitions.ProductSteps.iAmOnTheProductPageOf(java.lang.String)
+  ✔ Then the "Add to Wish List" and "Compare this Product" buttons are displayed # com.opencart.stepdefinitions.ProductSteps.theButtonsAreDisplayed(java.lang.String,java.lang.String)
+
+@registration @IB-13
+Scenario: Registration requires accepting the privacy policy                # src/test/resources/features/registration.feature:19
+09:52:51.492 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Registration requires accepting the privacy policy [@registration, @IB-13]
+  ✔ And the product tabs "Description" and "Reviews" are available  # com.opencart.stepdefinitions.ProductSteps.theProductTabsAreAvailable(java.lang.String,java.lang.String)
+  ✔ When I register with valid details and accept the privacy policy # com.opencart.stepdefinitions.RegistrationSteps.iRegisterWithValidDetails()
+
+@registration @IB-13
+Scenario: Mandatory registration fields are validated   # src/test/resources/features/registration.feature:24
+09:52:53.072 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: Mandatory registration fields are validated [@registration, @IB-13]
+  ✔ Given I am on the Register Account page                                 # com.opencart.stepdefinitions.RegistrationSteps.iAmOnTheRegisterAccountPage()
+  ✔ Then the page heading is "Your Account Has Been Created!"        # com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)
+
+@search @IB-15 @smoke
+Scenario: Search for an existing product                 # src/test/resources/features/search.feature:11
+09:52:55.766 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Search for an existing product [@search, @IB-15, @smoke]
+  ✔ Given I am on the Register Account page             # com.opencart.stepdefinitions.RegistrationSteps.iAmOnTheRegisterAccountPage()
+  ✔ When I submit the registration form empty           # com.opencart.stepdefinitions.RegistrationSteps.iSubmitTheRegistrationFormEmpty()
+  ✔ Given a customer account already exists                                 # com.opencart.stepdefinitions.RegistrationSteps.aCustomerAccountAlreadyExists()
+  ✔ Then I see the following registration field errors: # com.opencart.stepdefinitions.RegistrationSteps.iSeeTheFollowingFieldErrors(io.cucumber.datatable.DataTable)
+      | field      | message                                         |
+      | First Name | First Name must be between 1 and 32 characters! |
+      | Last Name  | Last Name must be between 1 and 32 characters!  |
+      | E-Mail     | E-Mail Address does not appear to be valid!     |
+      | Password   | Password must                                   |
+
+@search @IB-15
+Scenario: A partial keyword returns every matching product # src/test/resources/features/search.feature:15
+09:52:58.262 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: A partial keyword returns every matching product [@search, @IB-15]
+  ✔ And I am on the Register Account page                                   # com.opencart.stepdefinitions.RegistrationSteps.iAmOnTheRegisterAccountPage()
+  ✔ When I register with valid details without accepting the privacy policy # com.opencart.stepdefinitions.RegistrationSteps.iRegisterWithoutAcceptingThePrivacyPolicy()
+  ✔ Given I am on the home page                          # com.opencart.stepdefinitions.CommonSteps.iAmOnTheHomePage()
+  ✔ Then I see the warning "Warning: You must agree to the Privacy Policy!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@search @IB-15
+Scenario: Search for a product that does not exist                                 # src/test/resources/features/search.feature:20
+09:52:59.140 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Search for a product that does not exist [@search, @IB-15]
+  ✔ When I search for "iPhone"                           # com.opencart.stepdefinitions.SearchSteps.iSearchFor(java.lang.String)
+  ✔ Given I am on the home page                            # com.opencart.stepdefinitions.CommonSteps.iAmOnTheHomePage()
+  ✔ Then the search results contain the product "iPhone" # com.opencart.stepdefinitions.SearchSteps.theSearchResultsContainTheProduct(java.lang.String)
+
+@cart @IB-17 @smoke
+Scenario: An added product appears in the cart               # src/test/resources/features/shopping-cart.feature:8
+09:53:01.830 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: An added product appears in the cart [@cart, @IB-17, @smoke]
+  ✔ When I register again with the same e-mail                              # com.opencart.stepdefinitions.RegistrationSteps.iRegisterAgainWithTheSameEmail()
+  ✔ Then I see the warning "Warning: E-Mail Address is already registered!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@cart @IB-17
+Scenario: Update the quantity of a product in the cart                              # src/test/resources/features/shopping-cart.feature:13
+09:53:02.530 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: Update the quantity of a product in the cart [@cart, @IB-17]
+  ✔ Given I am on the home page                                                    # com.opencart.stepdefinitions.CommonSteps.iAmOnTheHomePage()
+  ✔ When I search for "mac"                                # com.opencart.stepdefinitions.SearchSteps.iSearchFor(java.lang.String)
+  ✔ Then more than one product is found                    # com.opencart.stepdefinitions.SearchSteps.moreThanOneProductIsFound()
+  ✔ And every product name in the results contains "mac"   # com.opencart.stepdefinitions.SearchSteps.everyProductNameContains(java.lang.String)
+
+@cart @IB-17
+Scenario: Remove a product from the cart                  # src/test/resources/features/shopping-cart.feature:20
+09:53:05.171 [TestNG-PoolService-2] INFO com.opencart.hooks.Hooks - Starting scenario: Remove a product from the cart [@cart, @IB-17]
+  ✔ When I search for "NoSuchProduct12345"                                         # com.opencart.stepdefinitions.SearchSteps.iSearchFor(java.lang.String)
+  ✔ Then I see the message "There is no product that matches the search criteria." # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+
+@cart @IB-17
+Scenario: An empty cart shows an empty message            # src/test/resources/features/shopping-cart.feature:26
+09:53:05.826 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: An empty cart shows an empty message [@cart, @IB-17]
+  ✔ When I open the shopping cart                         # com.opencart.stepdefinitions.CartSteps.iOpenTheShoppingCart()
+  ✔ Then I see the message "Your shopping cart is empty!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ Given I have added "iPhone" to the shopping cart         # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+
+@wishlist @IB-18 @auth @smoke
+Scenario: Add a product to the wish list                                                # src/test/resources/features/wishlist.feature:8
+09:53:10.058 [TestNG-PoolService-1] INFO com.opencart.hooks.Hooks - Starting scenario: Add a product to the wish list [@wishlist, @IB-18, @auth, @smoke]
+  ✔ Given I have added "iPhone" to the shopping cart                                # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+  ✔ When I open the shopping cart                            # com.opencart.stepdefinitions.CartSteps.iOpenTheShoppingCart()
+  ✔ Then the shopping cart contains "iPhone" with quantity 1 # com.opencart.stepdefinitions.CartSteps.theShoppingCartContains(java.lang.String,int)
+
+@wishlist @IB-18 @auth
+Scenario: Remove a product from the wish list         # src/test/resources/features/wishlist.feature:15
+09:53:11.466 [TestNG-PoolService-3] INFO com.opencart.hooks.Hooks - Starting scenario: Remove a product from the wish list [@wishlist, @IB-18, @auth]
+  ✔ And I open the shopping cart                                                    # com.opencart.stepdefinitions.CartSteps.iOpenTheShoppingCart()
+  ✔ Given I have added "iPhone" to the shopping cart      # com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)
+  ✔ When I change the quantity of "iPhone" to 3 and update the cart                 # com.opencart.stepdefinitions.CartSteps.iChangeTheQuantity(java.lang.String,int)
+  ✔ And I open the shopping cart                          # com.opencart.stepdefinitions.CartSteps.iOpenTheShoppingCart()
+  ✔ Then I see the success message "Success: You have modified your shopping cart!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ When I remove "iPhone" from the shopping cart         # com.opencart.stepdefinitions.CartSteps.iRemoveFromTheShoppingCart(java.lang.String)
+  ✔ And the shopping cart contains "iPhone" with quantity 3                         # com.opencart.stepdefinitions.CartSteps.theShoppingCartContains(java.lang.String,int)
+
+@wishlist @IB-18
+Scenario: A guest is asked to log in before saving to the wish list                                # src/test/resources/features/wishlist.feature:21
+09:53:15.407 [TestNG-PoolService-4] INFO com.opencart.hooks.Hooks - Starting scenario: A guest is asked to log in before saving to the wish list [@wishlist, @IB-18]
+  ✔ Then I see the message "Your shopping cart is empty!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ Given I am logged in                                                                # com.opencart.stepdefinitions.WishlistSteps.iAmLoggedIn()
+  ✔ Given I am not logged in                                                                       # com.opencart.stepdefinitions.WishlistSteps.iAmNotLoggedIn()
+  ✔ Given I am logged in                              # com.opencart.stepdefinitions.WishlistSteps.iAmLoggedIn()
+  ✔ When I add "MacBook" to my wish list                                                # com.opencart.stepdefinitions.WishlistSteps.iAddToMyWishList(java.lang.String)
+  ✔ When I add "iPhone" to my wish list                                                            # com.opencart.stepdefinitions.WishlistSteps.iAddToMyWishList(java.lang.String)
+  ✔ Then I see the success message "Success: You have added MacBook to your wish list!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ Then I see the message "You must login or create an account to save iPhone to your wish list!" # com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)
+  ✔ And my wish list contains "MacBook"                                                 # com.opencart.stepdefinitions.WishlistSteps.myWishListContains(java.lang.String)
+  ✔ And "HTC Touch HD" is in my wish list             # com.opencart.stepdefinitions.WishlistSteps.isInMyWishList(java.lang.String)
+  ✔ When I remove "HTC Touch HD" from my wish list    # com.opencart.stepdefinitions.WishlistSteps.iRemoveFromMyWishList(java.lang.String)
+  ✔ Then my wish list does not contain "HTC Touch HD" # com.opencart.stepdefinitions.WishlistSteps.myWishListDoesNotContain(java.lang.String)
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91.51 s -- in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ opencart-selenium-bdd ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /home/runner/work/Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript-using-the-QA-Autonomous-System/Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript-using-the-QA-Autonomous-System/target/opencart-selenium-bdd-1.0.0.jar
+[INFO] 
+[INFO] --- plugin:5.11.0:generate (module-report) @ opencart-selenium-bdd ---
+[INFO] About to generate Cucumber report.
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:38 min
+[INFO] Finished at: 2026-10-24T09:53:27Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal net.masterthought:maven-cucumber-reporting:5.11.0:generate (module-report) on project opencart-selenium-bdd: Execution module-report of goal net.masterthought:maven-cucumber-reporting:5.11.0:generate failed: A required class was missing while executing net.masterthought:maven-cucumber-reporting:5.11.0:generate: org/apache/commons/beanutils/BeanIntrospector
+[ERROR] -----------------------------------------------------
+[ERROR] realm =    plugin>net.masterthought:maven-cucumber-reporting:5.11.0
+[ERROR] strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+[ERROR] urls[0] = file:/home/runner/.m2/repository/net/masterthought/maven-cucumber-reporting/5.11.0/maven-cucumber-reporting-5.11.0.jar
+[ERROR] urls[1] = file:/home/runner/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar
+[ERROR] urls[2] = file:/home/runner/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar
+[ERROR] urls[3] = file:/home/runner/.m2/repository/net/masterthought/cucumber-reporting/5.11.0/cucumber-reporting-5.11.0.jar
+[ERROR] urls[4] = file:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.2/jackson-databind-2.21.2.jar
+[ERROR] urls[5] = file:/home/runner/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.2/jackson-datatype-jsr310-2.21.2.jar
+[ERROR] urls[6] = file:/home/runner/.m2/repository/org/apache/velocity/velocity-engine-core/2.4.1/velocity-engine-core-2.4.1.jar
+[ERROR] urls[7] = file:/home/runner/.m2/repository/joda-time/joda-time/2.14.1/joda-time-2.14.1.jar
+[ERROR] urls[8] = file:/home/runner/.m2/repository/org/apache/commons/commons-configuration2/2.13.0/commons-configuration2-2.13.0.jar
+[ERROR] urls[9] = file:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar
+[ERROR] urls[10] = file:/home/runner/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar
+[ERROR] urls[11] = file:/home/runner/.m2/repository/org/apache/commons/commons-text/1.15.0/commons-text-1.15.0.jar
+[ERROR] urls[12] = file:/home/runner/.m2/repository/org/jsoup/jsoup/1.22.1/jsoup-1.22.1.jar
+[ERROR] urls[13] = file:/home/runner/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20260313.1/owasp-java-html-sanitizer-20260313.1.jar
+[ERROR] urls[14] = file:/home/runner/.m2/repository/org/slf4j/jcl-over-slf4j/2.0.17/jcl-over-slf4j-2.0.17.jar
+[ERROR] urls[15] = file:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar
+[ERROR] urls[16] = file:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.2/jackson-core-2.21.2.jar
+[ERROR] urls[17] = file:/home/runner/.m2/repository/com/googlecode/owasp-java-html-sanitizer/java8-shim/20260313.1/java8-shim-20260313.1.jar
+[ERROR] urls[18] = file:/home/runner/.m2/repository/com/googlecode/owasp-java-html-sanitizer/java10-shim/20260313.1/java10-shim-20260313.1.jar
+[ERROR] Number of foreign imports: 1
+[ERROR] import: Entry[import  from realm ClassRealm[maven.api, parent: null]]
+[ERROR] 
+[ERROR] -----------------------------------------------------: org.apache.commons.beanutils.BeanIntrospector
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginContainerException
