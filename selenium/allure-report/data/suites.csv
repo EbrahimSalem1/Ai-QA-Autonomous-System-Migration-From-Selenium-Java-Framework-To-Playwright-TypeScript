@@ -1,88 +1,88 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"  As a shopper
+  I want to review and adjust the products in my shopping cart
+  So that I buy exactly what I need","11035","Remove a product from the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","Remove a product from the cart",""
+"  As a shopper
+  I want to review and adjust the products in my shopping cart
+  So that I buy exactly what I need","9685","An added product appears in the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","An added product appears in the cart",""
+"  As a shopper
+  I want to compare products side by side
+  So that I can choose the one that suits me best","3440","An empty comparison shows an empty message","","2026-10-24","passed","2026-10-24","","Product compare","An empty comparison shows an empty message",""
 "  As a registered customer
   I want to log in and out of my account
-  So that I can access my account features securely","6095","Login is rejected for an unregistered e-mail","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login is rejected for an unregistered e-mail",""
+  So that I can access my account features securely","9171","Login is rejected for a wrong password","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login is rejected for a wrong password",""
 "  As a new visitor of the OpenCart store
   I want to create a customer account
-  So that I can log in, save a wish list and check out faster","13298","Registration is rejected for an e-mail that is already registered","","2026-10-24","passed","2026-10-24","","Customer registration","Registration is rejected for an e-mail that is already registered",""
+  So that I can log in, save a wish list and check out faster","12918","Registration is rejected for an e-mail that is already registered","","2026-10-24","passed","2026-10-24","","Customer registration","Registration is rejected for an e-mail that is already registered",""
+"  As a shopper
+  I want to check out the products in my cart
+  So that I can place an order","32844","A logged-in customer reaches checkout without the account step","","2026-10-24","passed","2026-10-24","","Checkout","A logged-in customer reaches checkout without the account step",""
+"  As a new visitor of the OpenCart store
+  I want to create a customer account
+  So that I can log in, save a wish list and check out faster","6689","Registration requires accepting the privacy policy","","2026-10-24","passed","2026-10-24","","Customer registration","Registration requires accepting the privacy policy",""
+"  As a new visitor of the OpenCart store
+  I want to create a customer account
+  So that I can log in, save a wish list and check out faster","8427","Register a new account with valid details","","2026-10-24","passed","2026-10-24","","Customer registration","Register a new account with valid details",""
+"  As a shopper
+  I want to compare products side by side
+  So that I can choose the one that suits me best","14841","Compare two products side by side","","2026-10-24","passed","2026-10-24","","Product compare","Compare two products side by side",""
+"  As a new visitor of the OpenCart store
+  I want to create a customer account
+  So that I can log in, save a wish list and check out faster","4208","Mandatory registration fields are validated","","2026-10-24","passed","2026-10-24","","Customer registration","Mandatory registration fields are validated",""
 "  As a registered customer
   I want to save products to my wish list
-  So that I can come back and buy them later","7628","A guest is asked to log in before saving to the wish list","","2026-10-24","passed","2026-10-24","","Wish list","A guest is asked to log in before saving to the wish list",""
-"  As a shopper
-  I want to compare products side by side
-  So that I can choose the one that suits me best","15353","Compare two products side by side","","2026-10-24","passed","2026-10-24","","Product compare","Compare two products side by side",""
-"  As a shopper
-  I want to check out the products in my cart
-  So that I can place an order","7062","Checkout with an empty cart returns to the shopping cart","","2026-10-24","passed","2026-10-24","","Checkout","Checkout with an empty cart returns to the shopping cart",""
-"  As a registered customer
-  I want to log in and out of my account
-  So that I can access my account features securely","16307","Logout from the account","","2026-10-24","passed","2026-10-24","","Customer login and logout","Logout from the account",""
-"  As a shopper
-  I want to review and adjust the products in my shopping cart
-  So that I buy exactly what I need","12072","Remove a product from the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","Remove a product from the cart",""
-"  As a shopper
-  I want to open a product and see its details
-  So that I can decide whether to buy it, save it or compare it","15591","Product information is shown","","2026-10-24","passed","2026-10-24","","Product details page","Product information is shown",""
-"  As a shopper
-  I want to compare products side by side
-  So that I can choose the one that suits me best","3826","An empty comparison shows an empty message","","2026-10-24","passed","2026-10-24","","Product compare","An empty comparison shows an empty message",""
-"  As a new visitor of the OpenCart store
-  I want to create a customer account
-  So that I can log in, save a wish list and check out faster","5160","Mandatory registration fields are validated","","2026-10-24","passed","2026-10-24","","Customer registration","Mandatory registration fields are validated",""
-"  As a registered customer
-  I want to log in and out of my account
-  So that I can access my account features securely","8542","Login is rejected for a wrong password","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login is rejected for a wrong password",""
-"  As a shopper
-  I want to search the catalogue by keyword
-  So that I can quickly find the products I am interested in","6027","Search for an existing product","","2026-10-24","passed","2026-10-24","","Product search","Search for an existing product",""
-"  As a shopper
-  I want to compare products side by side
-  So that I can choose the one that suits me best","16931","Remove a product from the comparison","","2026-10-24","passed","2026-10-24","","Product compare","Remove a product from the comparison",""
-"  As a shopper
-  I want to review and adjust the products in my shopping cart
-  So that I buy exactly what I need","9618","An added product appears in the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","An added product appears in the cart",""
-"  As a shopper
-  I want to review and adjust the products in my shopping cart
-  So that I buy exactly what I need","12877","Update the quantity of a product in the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","Update the quantity of a product in the cart",""
-"  As a shopper
-  I want to open a product and see its details
-  So that I can decide whether to buy it, save it or compare it","6912","Wish list and compare actions are available","","2026-10-24","passed","2026-10-24","","Product details page","Wish list and compare actions are available",""
-"  As a new visitor of the OpenCart store
-  I want to create a customer account
-  So that I can log in, save a wish list and check out faster","7631","Registration requires accepting the privacy policy","","2026-10-24","passed","2026-10-24","","Customer registration","Registration requires accepting the privacy policy",""
-"  As a registered customer
-  I want to log in and out of my account
-  So that I can access my account features securely","11779","Login with valid credentials","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login with valid credentials",""
-"  As a shopper
-  I want to check out the products in my cart
-  So that I can place an order","28206","The order cannot be confirmed until the terms and conditions are accepted","","2026-10-24","passed","2026-10-24","","Checkout","The order cannot be confirmed until the terms and conditions are accepted",""
-"  As a shopper
-  I want to search the catalogue by keyword
-  So that I can quickly find the products I am interested in","6628","Search for a product that does not exist","","2026-10-24","passed","2026-10-24","","Product search","Search for a product that does not exist",""
+  So that I can come back and buy them later","13530","Add a product to the wish list","","2026-10-24","passed","2026-10-24","","Wish list","Add a product to the wish list",""
 "  As a registered customer
   I want to save products to my wish list
-  So that I can come back and buy them later","13871","Remove a product from the wish list","","2026-10-24","passed","2026-10-24","","Wish list","Remove a product from the wish list",""
-"  As a new visitor of the OpenCart store
-  I want to create a customer account
-  So that I can log in, save a wish list and check out faster","9071","Register a new account with valid details","","2026-10-24","passed","2026-10-24","","Customer registration","Register a new account with valid details",""
-"  As a shopper
-  I want to review and adjust the products in my shopping cart
-  So that I buy exactly what I need","4196","An empty cart shows an empty message","","2026-10-24","passed","2026-10-24","","Shopping cart","An empty cart shows an empty message",""
-"  As a shopper
-  I want to search the catalogue by keyword
-  So that I can quickly find the products I am interested in","6891","A partial keyword returns every matching product","","2026-10-24","passed","2026-10-24","","Product search","A partial keyword returns every matching product",""
-"  As a shopper
-  I want to check out the products in my cart
-  So that I can place an order","33255","Guest checkout places an order","","2026-10-24","passed","2026-10-24","","Checkout","Guest checkout places an order",""
-"  As a shopper
-  I want to check out the products in my cart
-  So that I can place an order","29263","A logged-in customer reaches checkout without the account step","","2026-10-24","passed","2026-10-24","","Checkout","A logged-in customer reaches checkout without the account step",""
-"  As a registered customer
-  I want to save products to my wish list
-  So that I can come back and buy them later","13299","Add a product to the wish list","","2026-10-24","passed","2026-10-24","","Wish list","Add a product to the wish list",""
+  So that I can come back and buy them later","12315","Remove a product from the wish list","","2026-10-24","passed","2026-10-24","","Wish list","Remove a product from the wish list",""
 "  As a shopper
   I want to open a product and see its details
-  So that I can decide whether to buy it, save it or compare it","8764","Add a product to the cart with a chosen quantity","","2026-10-24","passed","2026-10-24","","Product details page","Add a product to the cart with a chosen quantity",""
+  So that I can decide whether to buy it, save it or compare it","7992","Add a product to the cart with a chosen quantity","","2026-10-24","passed","2026-10-24","","Product details page","Add a product to the cart with a chosen quantity",""
+"  As a shopper
+  I want to review and adjust the products in my shopping cart
+  So that I buy exactly what I need","4351","An empty cart shows an empty message","","2026-10-24","passed","2026-10-24","","Shopping cart","An empty cart shows an empty message",""
+"  As a shopper
+  I want to search the catalogue by keyword
+  So that I can quickly find the products I am interested in","6324","A partial keyword returns every matching product","","2026-10-24","passed","2026-10-24","","Product search","A partial keyword returns every matching product",""
 "  As a shopper
   I want to compare products side by side
-  So that I can choose the one that suits me best","8396","Add a product to the comparison","","2026-10-24","passed","2026-10-24","","Product compare","Add a product to the comparison",""
+  So that I can choose the one that suits me best","7841","Add a product to the comparison","","2026-10-24","passed","2026-10-24","","Product compare","Add a product to the comparison",""
+"  As a shopper
+  I want to search the catalogue by keyword
+  So that I can quickly find the products I am interested in","6271","Search for a product that does not exist","","2026-10-24","passed","2026-10-24","","Product search","Search for a product that does not exist",""
+"  As a registered customer
+  I want to save products to my wish list
+  So that I can come back and buy them later","7618","A guest is asked to log in before saving to the wish list","","2026-10-24","passed","2026-10-24","","Wish list","A guest is asked to log in before saving to the wish list",""
+"  As a shopper
+  I want to compare products side by side
+  So that I can choose the one that suits me best","15925","Remove a product from the comparison","","2026-10-24","passed","2026-10-24","","Product compare","Remove a product from the comparison",""
+"  As a shopper
+  I want to check out the products in my cart
+  So that I can place an order","34529","The order cannot be confirmed until the terms and conditions are accepted","","2026-10-24","passed","2026-10-24","","Checkout","The order cannot be confirmed until the terms and conditions are accepted",""
+"  As a registered customer
+  I want to log in and out of my account
+  So that I can access my account features securely","10459","Login with valid credentials","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login with valid credentials",""
+"  As a shopper
+  I want to check out the products in my cart
+  So that I can place an order","13464","Checkout with an empty cart returns to the shopping cart","","2026-10-24","passed","2026-10-24","","Checkout","Checkout with an empty cart returns to the shopping cart",""
+"  As a registered customer
+  I want to log in and out of my account
+  So that I can access my account features securely","6215","Login is rejected for an unregistered e-mail","","2026-10-24","passed","2026-10-24","","Customer login and logout","Login is rejected for an unregistered e-mail",""
+"  As a registered customer
+  I want to log in and out of my account
+  So that I can access my account features securely","13484","Logout from the account","","2026-10-24","passed","2026-10-24","","Customer login and logout","Logout from the account",""
+"  As a shopper
+  I want to review and adjust the products in my shopping cart
+  So that I buy exactly what I need","11832","Update the quantity of a product in the cart","","2026-10-24","passed","2026-10-24","","Shopping cart","Update the quantity of a product in the cart",""
+"  As a shopper
+  I want to open a product and see its details
+  So that I can decide whether to buy it, save it or compare it","12867","Product information is shown","","2026-10-24","passed","2026-10-24","","Product details page","Product information is shown",""
+"  As a shopper
+  I want to search the catalogue by keyword
+  So that I can quickly find the products I am interested in","6471","Search for an existing product","","2026-10-24","passed","2026-10-24","","Product search","Search for an existing product",""
+"  As a shopper
+  I want to open a product and see its details
+  So that I can decide whether to buy it, save it or compare it","7476","Wish list and compare actions are available","","2026-10-24","passed","2026-10-24","","Product details page","Wish list and compare actions are available",""
+"  As a shopper
+  I want to check out the products in my cart
+  So that I can place an order","34920","Guest checkout places an order","","2026-10-24","passed","2026-10-24","","Checkout","Guest checkout places an order",""

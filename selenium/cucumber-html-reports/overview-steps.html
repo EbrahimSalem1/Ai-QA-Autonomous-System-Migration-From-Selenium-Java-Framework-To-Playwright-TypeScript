@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OpenCart - Selenium Java Cucumber</td>
+        <td>1</td>
+      <td>24 Oct 2026, 09:56</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.opencart.hooks.Hooks.attachEvidence(io.cucumber.java.Scenario)</td>
+              <td>29</td>
+              <td class="duration" data-value="1797267">0.001</td>
+              <td class="duration" data-value="1797267">0.023</td>
+              <td class="duration" data-value="52120765">0.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.hooks.Hooks.authenticate()</td>
+              <td>3</td>
+              <td class="duration" data-value="5137607482">5.137</td>
+              <td class="duration" data-value="5137607482">11.718</td>
+              <td class="duration" data-value="15412822448">15.412</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.hooks.Hooks.closeBrowser()</td>
+              <td>29</td>
+              <td class="duration" data-value="242295134">0.242</td>
+              <td class="duration" data-value="242295134">0.385</td>
+              <td class="duration" data-value="7026558902">7.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.hooks.Hooks.startBrowser(io.cucumber.java.Scenario)</td>
+              <td>29</td>
+              <td class="duration" data-value="3121430461">3.121</td>
+              <td class="duration" data-value="3121430461">10.378</td>
+              <td class="duration" data-value="90521483392">1:30.521</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CartSteps.iChangeTheQuantity(java.lang.String,int)</td>
+              <td>1</td>
+              <td class="duration" data-value="1803141613">1.803</td>
+              <td class="duration" data-value="1803141613">1.803</td>
+              <td class="duration" data-value="1803141613">1.803</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CartSteps.iHaveAddedToTheShoppingCart(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="6429755472">6.429</td>
+              <td class="duration" data-value="6429755472">7.682</td>
+              <td class="duration" data-value="38578532837">38.578</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CartSteps.iOpenTheShoppingCart()</td>
+              <td>4</td>
+              <td class="duration" data-value="1142711936">1.142</td>
+              <td class="duration" data-value="1142711936">1.316</td>
+              <td class="duration" data-value="4570847744">4.570</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CartSteps.iRemoveFromTheShoppingCart(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="643314141">0.643</td>
+              <td class="duration" data-value="643314141">0.643</td>
+              <td class="duration" data-value="643314141">0.643</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CartSteps.theShoppingCartContains(java.lang.String,int)</td>
+              <td>2</td>
+              <td class="duration" data-value="226048200">0.226</td>
+              <td class="duration" data-value="226048200">0.266</td>
+              <td class="duration" data-value="452096400">0.452</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iAgreeToTheTermsAndConditions()</td>
+              <td>2</td>
+              <td class="duration" data-value="773860261">0.773</td>
+              <td class="duration" data-value="773860261">0.899</td>
+              <td class="duration" data-value="1547720523">1.547</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iCheckOutAsAGuest()</td>
+              <td>2</td>
+              <td class="duration" data-value="6256717007">6.256</td>
+              <td class="duration" data-value="6256717007">6.259</td>
+              <td class="duration" data-value="12513434014">12.513</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iChooseThePaymentMethod(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1949821507">1.949</td>
+              <td class="duration" data-value="1949821507">2.249</td>
+              <td class="duration" data-value="3899643015">3.899</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iChooseTheShippingMethod(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2785699965">2.785</td>
+              <td class="duration" data-value="2785699965">3.139</td>
+              <td class="duration" data-value="5571399931">5.571</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iConfirmTheOrder()</td>
+              <td>1</td>
+              <td class="duration" data-value="521212248">0.521</td>
+              <td class="duration" data-value="521212248">0.521</td>
+              <td class="duration" data-value="521212248">0.521</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iOpenTheCheckoutPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1736837334">1.736</td>
+              <td class="duration" data-value="1736837334">1.736</td>
+              <td class="duration" data-value="1736837334">1.736</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.iProceedToCheckout()</td>
+              <td>3</td>
+              <td class="duration" data-value="2429992174">2.429</td>
+              <td class="duration" data-value="2429992174">2.996</td>
+              <td class="duration" data-value="7289976522">7.289</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.theGuestCheckoutOptionIsNotOffered()</td>
+              <td>1</td>
+              <td class="duration" data-value="107878666">0.107</td>
+              <td class="duration" data-value="107878666">0.107</td>
+              <td class="duration" data-value="107878666">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.theOrderCanBeConfirmed()</td>
+              <td>1</td>
+              <td class="duration" data-value="289820263">0.289</td>
+              <td class="duration" data-value="289820263">0.289</td>
+              <td class="duration" data-value="289820263">0.289</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CheckoutSteps.theOrderCannotBeConfirmed()</td>
+              <td>1</td>
+              <td class="duration" data-value="239893601">0.239</td>
+              <td class="duration" data-value="239893601">0.239</td>
+              <td class="duration" data-value="239893601">0.239</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CommonSteps.iAmOnTheHomePage()</td>
+              <td>4</td>
+              <td class="duration" data-value="1313211214">1.313</td>
+              <td class="duration" data-value="1313211214">1.414</td>
+              <td class="duration" data-value="5252844859">5.252</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CommonSteps.iSeeTheMessage(java.lang.String)</td>
+              <td>15</td>
+              <td class="duration" data-value="551933889">0.551</td>
+              <td class="duration" data-value="551933889">1.595</td>
+              <td class="duration" data-value="8279008339">8.279</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CommonSteps.thePageHeadingIs(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1095568313">1.095</td>
+              <td class="duration" data-value="1095568313">2.231</td>
+              <td class="duration" data-value="6573409880">6.573</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.iAddTheProductToTheComparison()</td>
+              <td>1</td>
+              <td class="duration" data-value="562169549">0.562</td>
+              <td class="duration" data-value="562169549">0.562</td>
+              <td class="duration" data-value="562169549">0.562</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.iHaveAddedProductsToTheComparison(java.util.List)</td>
+              <td>2</td>
+              <td class="duration" data-value="10934738139">10.934</td>
+              <td class="duration" data-value="10934738139">11.270</td>
+              <td class="duration" data-value="21869476279">21.869</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.iOpenTheProductComparisonPage()</td>
+              <td>3</td>
+              <td class="duration" data-value="1159537227">1.159</td>
+              <td class="duration" data-value="1159537227">1.363</td>
+              <td class="duration" data-value="3478611683">3.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.iRemoveFromTheComparison(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2157765673">2.157</td>
+              <td class="duration" data-value="2157765673">2.157</td>
+              <td class="duration" data-value="2157765673">2.157</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.theProductComparisonContains(java.util.List)</td>
+              <td>2</td>
+              <td class="duration" data-value="127370288">0.127</td>
+              <td class="duration" data-value="127370288">0.213</td>
+              <td class="duration" data-value="254740577">0.254</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.CompareSteps.theProductComparisonDoesNotContain(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="48406336">0.048</td>
+              <td class="duration" data-value="48406336">0.048</td>
+              <td class="duration" data-value="48406336">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iAmARegisteredCustomer()</td>
+              <td>3</td>
+              <td class="duration" data-value="5242440670">5.242</td>
+              <td class="duration" data-value="5242440670">5.910</td>
+              <td class="duration" data-value="15727322011">15.727</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iAmOnTheAccountLoginPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="1023236870">1.023</td>
+              <td class="duration" data-value="1023236870">2.021</td>
+              <td class="duration" data-value="4092947480">4.092</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iLogInWithAnUnregisteredEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="1880961184">1.880</td>
+              <td class="duration" data-value="1880961184">1.880</td>
+              <td class="duration" data-value="1880961184">1.880</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iLogInWithMyEmailAndPassword()</td>
+              <td>2</td>
+              <td class="duration" data-value="1498814634">1.498</td>
+              <td class="duration" data-value="1498814634">1.634</td>
+              <td class="duration" data-value="2997629269">2.997</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iLogInWithMyEmailAndThePassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1335855891">1.335</td>
+              <td class="duration" data-value="1335855891">1.335</td>
+              <td class="duration" data-value="1335855891">1.335</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.LoginSteps.iLogOut()</td>
+              <td>1</td>
+              <td class="duration" data-value="2570951077">2.570</td>
+              <td class="duration" data-value="2570951077">2.570</td>
+              <td class="duration" data-value="2570951077">2.570</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.iAmOnTheProductPageOf(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="4117864188">4.117</td>
+              <td class="duration" data-value="4117864188">4.226</td>
+              <td class="duration" data-value="12353592565">12.353</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.iOpenTheProduct(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1985969354">1.985</td>
+              <td class="duration" data-value="1985969354">1.985</td>
+              <td class="duration" data-value="1985969354">1.985</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.iSetTheQuantityAndAddToCart(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="866113327">0.866</td>
+              <td class="duration" data-value="866113327">0.866</td>
+              <td class="duration" data-value="866113327">0.866</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.theButtonsAreDisplayed(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1289996752">1.289</td>
+              <td class="duration" data-value="1289996752">1.289</td>
+              <td class="duration" data-value="1289996752">1.289</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.theProductHeadingIs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="100143551">0.100</td>
+              <td class="duration" data-value="100143551">0.100</td>
+              <td class="duration" data-value="100143551">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.theProductPriceIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="133893959">0.133</td>
+              <td class="duration" data-value="133893959">0.133</td>
+              <td class="duration" data-value="133893959">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.theProductTabsAreAvailable(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2039860836">2.039</td>
+              <td class="duration" data-value="2039860836">2.039</td>
+              <td class="duration" data-value="2039860836">2.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.ProductSteps.theQuantityAndAddToCartAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="3140945430">3.140</td>
+              <td class="duration" data-value="3140945430">3.140</td>
+              <td class="duration" data-value="3140945430">3.140</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.aCustomerAccountAlreadyExists()</td>
+              <td>1</td>
+              <td class="duration" data-value="5807254068">5.807</td>
+              <td class="duration" data-value="5807254068">5.807</td>
+              <td class="duration" data-value="5807254068">5.807</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iAmOnTheRegisterAccountPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="991392033">0.991</td>
+              <td class="duration" data-value="991392033">1.262</td>
+              <td class="duration" data-value="3965568133">3.965</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iRegisterAgainWithTheSameEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="3759027736">3.759</td>
+              <td class="duration" data-value="3759027736">3.759</td>
+              <td class="duration" data-value="3759027736">3.759</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iRegisterWithValidDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="2976483582">2.976</td>
+              <td class="duration" data-value="2976483582">2.976</td>
+              <td class="duration" data-value="2976483582">2.976</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iRegisterWithoutAcceptingThePrivacyPolicy()</td>
+              <td>1</td>
+              <td class="duration" data-value="3051252287">3.051</td>
+              <td class="duration" data-value="3051252287">3.051</td>
+              <td class="duration" data-value="3051252287">3.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iSeeTheFollowingFieldErrors(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="327808863">0.327</td>
+              <td class="duration" data-value="327808863">0.327</td>
+              <td class="duration" data-value="327808863">0.327</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.RegistrationSteps.iSubmitTheRegistrationFormEmpty()</td>
+              <td>1</td>
+              <td class="duration" data-value="648321449">0.648</td>
+              <td class="duration" data-value="648321449">0.648</td>
+              <td class="duration" data-value="648321449">0.648</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.SearchSteps.everyProductNameContains(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="341796420">0.341</td>
+              <td class="duration" data-value="341796420">0.341</td>
+              <td class="duration" data-value="341796420">0.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.SearchSteps.iSearchFor(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2123488931">2.123</td>
+              <td class="duration" data-value="2123488931">2.448</td>
+              <td class="duration" data-value="8493955725">8.493</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.SearchSteps.moreThanOneProductIsFound()</td>
+              <td>1</td>
+              <td class="duration" data-value="498283312">0.498</td>
+              <td class="duration" data-value="498283312">0.498</td>
+              <td class="duration" data-value="498283312">0.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.SearchSteps.theSearchResultsContainTheProduct(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="280285387">0.280</td>
+              <td class="duration" data-value="280285387">0.280</td>
+              <td class="duration" data-value="280285387">0.280</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.iAddToMyWishList(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4014830502">4.014</td>
+              <td class="duration" data-value="4014830502">4.166</td>
+              <td class="duration" data-value="8029661004">8.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.iAmLoggedIn()</td>
+              <td>3</td>
+              <td class="duration" data-value="2308924126">2.308</td>
+              <td class="duration" data-value="2308924126">2.826</td>
+              <td class="duration" data-value="6926772380">6.926</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.iAmNotLoggedIn()</td>
+              <td>1</td>
+              <td class="duration" data-value="801307165">0.801</td>
+              <td class="duration" data-value="801307165">0.801</td>
+              <td class="duration" data-value="801307165">0.801</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.iRemoveFromMyWishList(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1030608503">1.030</td>
+              <td class="duration" data-value="1030608503">1.030</td>
+              <td class="duration" data-value="1030608503">1.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.isInMyWishList(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5426797767">5.426</td>
+              <td class="duration" data-value="5426797767">5.426</td>
+              <td class="duration" data-value="5426797767">5.426</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.myWishListContains(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1498755712">1.498</td>
+              <td class="duration" data-value="1498755712">1.498</td>
+              <td class="duration" data-value="1498755712">1.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.opencart.stepdefinitions.WishlistSteps.myWishListDoesNotContain(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="429705681">0.429</td>
+              <td class="duration" data-value="429705681">0.429</td>
+              <td class="duration" data-value="429705681">0.429</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>60</td>
+            <td>204</td>
+            <td class="duration">1.696</td>
+            <td class="duration">1:30.521</td>
+            <td class="duration">5:46.064</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
