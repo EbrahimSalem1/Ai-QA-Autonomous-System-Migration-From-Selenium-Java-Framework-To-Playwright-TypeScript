@@ -1,8 +1,4 @@
-file:src/test/resources/features/checkout.feature:8:19:26:31
-file:src/test/resources/features/login.feature:8:14:20:25
-file:src/test/resources/features/product-compare.feature:8:13:22:33
-file:src/test/resources/features/product-details.feature:8:17:22
-file:src/test/resources/features/registration.feature:8:13:19:24
-file:src/test/resources/features/search.feature:11:15:20
-file:src/test/resources/features/shopping-cart.feature:8:13:20:26
-file:src/test/resources/features/wishlist.feature:8:15:21
+file:src/test/resources/features/checkout.feature:19:31
+file:src/test/resources/features/login.feature:25
+file:src/test/resources/features/product-compare.feature:22
+file:src/test/resources/features/wishlist.feature:8:15
