@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<testsuite name="OpenCart Playwright BDD" time="60.666850097" tests="29" skipped="0" failures="0" errors="0" timestamp="2026-10-24T09:49:01.391Z">
-  <testcase classname="Checkout" name="A logged-in customer reaches checkout without the account step" time="7.642">
+<testsuite name="OpenCart Playwright BDD" time="76.19587207" tests="29" skipped="0" failures="0" errors="0" timestamp="2026-10-25T06:13:43.245Z">
+  <testcase classname="Checkout" name="A logged-in customer reaches checkout without the account step" time="10.294">
     <system-out><![CDATA[Given I am logged in........................................................passed
 And I have added "MacBook" to the shopping cart.............................passed
 When I proceed to checkout..................................................passed
 Then the page heading is "Checkout".........................................passed
 And the guest checkout option is not offered................................passed]]></system-out>
   </testcase>
-  <testcase classname="Wish list" name="Add a product to the wish list" time="7.871">
+  <testcase classname="Wish list" name="Add a product to the wish list" time="9.084">
     <system-out><![CDATA[Given I am logged in........................................................passed
 When I add "MacBook" to my wish list........................................passed
 Then I see the success message "Success: You have added MacBook to your wish list!"..passed
 And my wish list contains "MacBook".........................................passed]]></system-out>
   </testcase>
-  <testcase classname="Wish list" name="Remove a product from the wish list" time="9.319">
+  <testcase classname="Wish list" name="Remove a product from the wish list" time="11.279">
     <system-out><![CDATA[Given I am logged in........................................................passed
 And "HTC Touch HD" is in my wish list.......................................passed
 When I remove "HTC Touch HD" from my wish list..............................passed
 Then my wish list does not contain "HTC Touch HD"...........................passed]]></system-out>
   </testcase>
-  <testcase classname="Checkout" name="Guest checkout places an order" time="17.556">
+  <testcase classname="Checkout" name="Guest checkout places an order" time="21.752">
     <system-out><![CDATA[Given I have added "iPhone" to the shopping cart............................passed
 When I proceed to checkout..................................................passed
 And I check out as a guest with valid personal details and address..........passed
@@ -29,12 +29,12 @@ And I choose the payment method "Cash On Delivery"..........................pass
 And I confirm the order.....................................................passed
 Then the page heading is "Your order has been placed!"......................passed]]></system-out>
   </testcase>
-  <testcase classname="Checkout" name="Checkout with an empty cart returns to the shopping cart" time="3.235">
+  <testcase classname="Checkout" name="Checkout with an empty cart returns to the shopping cart" time="3.816">
     <system-out><![CDATA[When I open the checkout page...............................................passed
 Then the page heading is "Shopping Cart"....................................passed
 And I see the message "Your shopping cart is empty!"........................passed]]></system-out>
   </testcase>
-  <testcase classname="Checkout" name="The order cannot be confirmed until the terms and conditions are accepted" time="17.103">
+  <testcase classname="Checkout" name="The order cannot be confirmed until the terms and conditions are accepted" time="20.718">
     <system-out><![CDATA[Given I have added "iPhone" to the shopping cart............................passed
 When I proceed to checkout..................................................passed
 And I check out as a guest with valid personal details and address..........passed
@@ -44,41 +44,41 @@ Then the order cannot be confirmed..........................................pass
 When I agree to the terms and conditions....................................passed
 Then the order can be confirmed.............................................passed]]></system-out>
   </testcase>
-  <testcase classname="Customer login and logout" name="Login with valid credentials" time="9.167">
+  <testcase classname="Customer login and logout" name="Login with valid credentials" time="12.376">
     <system-out><![CDATA[Given I am a registered customer............................................passed
 And I am on the Account Login page..........................................passed
 When I log in with my e-mail and password...................................passed
 Then the page heading is "My Account".......................................passed]]></system-out>
   </testcase>
-  <testcase classname="Customer login and logout" name="Login is rejected for a wrong password" time="9.184">
+  <testcase classname="Customer login and logout" name="Login is rejected for a wrong password" time="10.616">
     <system-out><![CDATA[Given I am a registered customer............................................passed
 And I am on the Account Login page..........................................passed
 When I log in with my e-mail and the password "WrongPass#123"...............passed
 Then I see the warning "Warning: No match for E-Mail Address and/or Password."..passed]]></system-out>
   </testcase>
-  <testcase classname="Customer login and logout" name="Login is rejected for an unregistered e-mail" time="3.474">
+  <testcase classname="Customer login and logout" name="Login is rejected for an unregistered e-mail" time="4.376">
     <system-out><![CDATA[Given I am on the Account Login page........................................passed
 When I log in with an unregistered e-mail...................................passed
 Then I see the warning "Warning: No match for E-Mail Address and/or Password."..passed]]></system-out>
   </testcase>
-  <testcase classname="Customer login and logout" name="Logout from the account" time="9.87">
+  <testcase classname="Customer login and logout" name="Logout from the account" time="12.213">
     <system-out><![CDATA[Given I am a registered customer............................................passed
 And I am on the Account Login page..........................................passed
 And I log in with my e-mail and password....................................passed
 When I log out..............................................................passed
 Then the page heading is "Account Logout"...................................passed]]></system-out>
   </testcase>
-  <testcase classname="Product compare" name="Add a product to the comparison" time="5.376">
+  <testcase classname="Product compare" name="Add a product to the comparison" time="6.254">
     <system-out><![CDATA[Given I am on the product page of "iPhone"..................................passed
 When I add the product to the comparison....................................passed
 Then I see the success message "Success: You have added iPhone to your product comparison!"..passed]]></system-out>
   </testcase>
-  <testcase classname="Product compare" name="Compare two products side by side" time="12.276">
+  <testcase classname="Product compare" name="Compare two products side by side" time="14.257">
     <system-out><![CDATA[Given I have added the following products to the comparison:................passed
 When I open the product comparison page.....................................passed
 Then the product comparison contains:.......................................passed]]></system-out>
   </testcase>
-  <testcase classname="Product compare" name="Remove a product from the comparison" time="11.365">
+  <testcase classname="Product compare" name="Remove a product from the comparison" time="12.931">
     <system-out><![CDATA[Given I have added the following products to the comparison:................passed
 And I open the product comparison page......................................passed
 When I remove "iPhone" from the comparison..................................passed
@@ -86,11 +86,11 @@ Then I see the success message "Success: You have modified your product comparis
 And the product comparison contains:........................................passed
 And the product comparison does not contain "iPhone"........................passed]]></system-out>
   </testcase>
-  <testcase classname="Product compare" name="An empty comparison shows an empty message" time="1.895">
+  <testcase classname="Product compare" name="An empty comparison shows an empty message" time="2.483">
     <system-out><![CDATA[When I open the product comparison page.....................................passed
 Then I see the message "You have not chosen any products to compare.".......passed]]></system-out>
   </testcase>
-  <testcase classname="Product details page" name="Product information is shown" time="5.557">
+  <testcase classname="Product details page" name="Product information is shown" time="7.29">
     <system-out><![CDATA[Given I am on the home page.................................................passed
 When I search for "MacBook".................................................passed
 And I open the product "MacBook"............................................passed
@@ -99,75 +99,75 @@ And the product price is displayed..........................................pass
 And the quantity field and the Add to Cart button are displayed.............passed
 And the product tabs "Description" and "Reviews" are available..............passed]]></system-out>
   </testcase>
-  <testcase classname="Product details page" name="Add a product to the cart with a chosen quantity" time="5.346">
+  <testcase classname="Product details page" name="Add a product to the cart with a chosen quantity" time="7.307">
     <system-out><![CDATA[Given I am on the product page of "iPhone"..................................passed
 When I set the quantity to 2 and add the product to the cart................passed
 Then I see the success message "Success: You have added iPhone to your shopping cart!"..passed]]></system-out>
   </testcase>
-  <testcase classname="Product details page" name="Wish list and compare actions are available" time="4.572">
+  <testcase classname="Product details page" name="Wish list and compare actions are available" time="5.706">
     <system-out><![CDATA[Given I am on the product page of "iPhone"..................................passed
 Then the "Add to Wish List" and "Compare this Product" buttons are displayed..passed]]></system-out>
   </testcase>
-  <testcase classname="Customer registration" name="Register a new account with valid details" time="4.53">
+  <testcase classname="Customer registration" name="Register a new account with valid details" time="5.365">
     <system-out><![CDATA[Given I am on the Register Account page.....................................passed
 When I register with valid details and accept the privacy policy............passed
 Then the page heading is "Your Account Has Been Created!"...................passed]]></system-out>
   </testcase>
-  <testcase classname="Customer registration" name="Registration is rejected for an e-mail that is already registered" time="8.33">
+  <testcase classname="Customer registration" name="Registration is rejected for an e-mail that is already registered" time="8.402">
     <system-out><![CDATA[Given a customer account already exists.....................................passed
 And I am on the Register Account page.......................................passed
 When I register again with the same e-mail..................................passed
 Then I see the warning "Warning: E-Mail Address is already registered!".....passed]]></system-out>
   </testcase>
-  <testcase classname="Customer registration" name="Registration requires accepting the privacy policy" time="2.716">
+  <testcase classname="Customer registration" name="Registration requires accepting the privacy policy" time="3.467">
     <system-out><![CDATA[Given I am on the Register Account page.....................................passed
 When I register with valid details without accepting the privacy policy.....passed
 Then I see the warning "Warning: You must agree to the Privacy Policy!".....passed]]></system-out>
   </testcase>
-  <testcase classname="Customer registration" name="Mandatory registration fields are validated" time="2.309">
+  <testcase classname="Customer registration" name="Mandatory registration fields are validated" time="3.481">
     <system-out><![CDATA[Given I am on the Register Account page.....................................passed
 When I submit the registration form empty...................................passed
 Then I see the following registration field errors:.........................passed]]></system-out>
   </testcase>
-  <testcase classname="Product search" name="Search for an existing product" time="3.595">
+  <testcase classname="Product search" name="Search for an existing product" time="4.416">
     <system-out><![CDATA[Given I am on the home page.................................................passed
 When I search for "iPhone"..................................................passed
 Then the search results contain the product "iPhone"........................passed]]></system-out>
   </testcase>
-  <testcase classname="Product search" name="A partial keyword returns every matching product" time="3.659">
+  <testcase classname="Product search" name="A partial keyword returns every matching product" time="4.782">
     <system-out><![CDATA[Given I am on the home page.................................................passed
 When I search for "mac".....................................................passed
 Then more than one product is found.........................................passed
 And every product name in the results contains "mac"........................passed]]></system-out>
   </testcase>
-  <testcase classname="Product search" name="Search for a product that does not exist" time="3.686">
+  <testcase classname="Product search" name="Search for a product that does not exist" time="4.08">
     <system-out><![CDATA[Given I am on the home page.................................................passed
 When I search for "NoSuchProduct12345"......................................passed
 Then I see the message "There is no product that matches the search criteria."..passed]]></system-out>
   </testcase>
-  <testcase classname="Shopping cart" name="An added product appears in the cart" time="5.901">
+  <testcase classname="Shopping cart" name="An added product appears in the cart" time="7.637">
     <system-out><![CDATA[Given I have added "iPhone" to the shopping cart............................passed
 When I open the shopping cart...............................................passed
 Then the shopping cart contains "iPhone" with quantity 1....................passed]]></system-out>
   </testcase>
-  <testcase classname="Shopping cart" name="Update the quantity of a product in the cart" time="6.769">
+  <testcase classname="Shopping cart" name="Update the quantity of a product in the cart" time="8.786">
     <system-out><![CDATA[Given I have added "iPhone" to the shopping cart............................passed
 And I open the shopping cart................................................passed
 When I change the quantity of "iPhone" to 3 and update the cart.............passed
 Then I see the success message "Success: You have modified your shopping cart!"..passed
 And the shopping cart contains "iPhone" with quantity 3.....................passed]]></system-out>
   </testcase>
-  <testcase classname="Shopping cart" name="Remove a product from the cart" time="6.562">
+  <testcase classname="Shopping cart" name="Remove a product from the cart" time="8.376">
     <system-out><![CDATA[Given I have added "iPhone" to the shopping cart............................passed
 And I open the shopping cart................................................passed
 When I remove "iPhone" from the shopping cart...............................passed
 Then I see the message "Your shopping cart is empty!".......................passed]]></system-out>
   </testcase>
-  <testcase classname="Shopping cart" name="An empty cart shows an empty message" time="2.375">
+  <testcase classname="Shopping cart" name="An empty cart shows an empty message" time="2.983">
     <system-out><![CDATA[When I open the shopping cart...............................................passed
 Then I see the message "Your shopping cart is empty!".......................passed]]></system-out>
   </testcase>
-  <testcase classname="Wish list" name="A guest is asked to log in before saving to the wish list" time="3.497">
+  <testcase classname="Wish list" name="A guest is asked to log in before saving to the wish list" time="5.171">
     <system-out><![CDATA[Given I am not logged in....................................................passed
 When I add "iPhone" to my wish list.........................................passed
 Then I see the message "You must login or create an account to save iPhone to your wish list!"..passed]]></system-out>
