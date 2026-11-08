@@ -16,7 +16,7 @@
             "name": "I open the checkout page",
             "result": {
               "status": "passed",
-              "duration": 636000000
+              "duration": 451000000
             }
           },
           {
@@ -26,7 +26,7 @@
             "name": "the page heading is \"Shopping Cart\"",
             "result": {
               "status": "passed",
-              "duration": 110000000
+              "duration": 96000000
             }
           },
           {
@@ -36,7 +36,7 @@
             "name": "I see the message \"Your shopping cart is empty!\"",
             "result": {
               "status": "passed",
-              "duration": 43000000
+              "duration": 30000000
             }
           }
         ],
@@ -66,7 +66,7 @@
             "name": "I have added \"iPhone\" to the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 2694000000
+              "duration": 2697000000
             }
           },
           {
@@ -76,7 +76,7 @@
             "name": "I proceed to checkout",
             "result": {
               "status": "passed",
-              "duration": 1241000000
+              "duration": 1340000000
             }
           },
           {
@@ -86,7 +86,7 @@
             "name": "I check out as a guest with valid personal details and address",
             "result": {
               "status": "passed",
-              "duration": 1470000000
+              "duration": 1305000000
             }
           },
           {
@@ -96,7 +96,7 @@
             "name": "I choose the shipping method \"Flat Shipping Rate\"",
             "result": {
               "status": "passed",
-              "duration": 629000000
+              "duration": 612000000
             }
           },
           {
@@ -106,7 +106,7 @@
             "name": "I choose the payment method \"Cash On Delivery\"",
             "result": {
               "status": "passed",
-              "duration": 538000000
+              "duration": 519000000
             }
           },
           {
@@ -116,7 +116,7 @@
             "name": "the order cannot be confirmed",
             "result": {
               "status": "passed",
-              "duration": 47000000
+              "duration": 39000000
             }
           },
           {
@@ -126,7 +126,7 @@
             "name": "I agree to the terms and conditions",
             "result": {
               "status": "passed",
-              "duration": 187000000
+              "duration": 129000000
             }
           },
           {
@@ -136,7 +136,7 @@
             "name": "the order can be confirmed",
             "result": {
               "status": "passed",
-              "duration": 176000000
+              "duration": 385000000
             }
           }
         ],
@@ -166,7 +166,7 @@
             "name": "I have added \"iPhone\" to the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 2790000000
+              "duration": 2895000000
             }
           },
           {
@@ -176,7 +176,7 @@
             "name": "I proceed to checkout",
             "result": {
               "status": "passed",
-              "duration": 1356000000
+              "duration": 1151000000
             }
           },
           {
@@ -186,7 +186,7 @@
             "name": "I check out as a guest with valid personal details and address",
             "result": {
               "status": "passed",
-              "duration": 1495000000
+              "duration": 1382000000
             }
           },
           {
@@ -196,7 +196,7 @@
             "name": "I choose the shipping method \"Flat Shipping Rate\"",
             "result": {
               "status": "passed",
-              "duration": 696000000
+              "duration": 571000000
             }
           },
           {
@@ -206,7 +206,7 @@
             "name": "I agree to the terms and conditions",
             "result": {
               "status": "passed",
-              "duration": 149000000
+              "duration": 74000000
             }
           },
           {
@@ -216,7 +216,7 @@
             "name": "I choose the payment method \"Cash On Delivery\"",
             "result": {
               "status": "passed",
-              "duration": 640000000
+              "duration": 583000000
             }
           },
           {
@@ -226,7 +226,7 @@
             "name": "I confirm the order",
             "result": {
               "status": "passed",
-              "duration": 225000000
+              "duration": 177000000
             }
           },
           {
@@ -236,7 +236,7 @@
             "name": "the page heading is \"Your order has been placed!\"",
             "result": {
               "status": "passed",
-              "duration": 389000000
+              "duration": 572000000
             }
           }
         ],
@@ -294,7 +294,7 @@
             "name": "I am a registered customer",
             "result": {
               "status": "passed",
-              "duration": 2594000000
+              "duration": 2842000000
             }
           },
           {
@@ -304,7 +304,7 @@
             "name": "I am on the Account Login page",
             "result": {
               "status": "passed",
-              "duration": 558000000
+              "duration": 463000000
             }
           },
           {
@@ -314,7 +314,7 @@
             "name": "I log in with my e-mail and password",
             "result": {
               "status": "passed",
-              "duration": 354000000
+              "duration": 256000000
             }
           },
           {
@@ -324,7 +324,7 @@
             "name": "the page heading is \"My Account\"",
             "result": {
               "status": "passed",
-              "duration": 476000000
+              "duration": 579000000
             }
           }
         ],
@@ -358,7 +358,7 @@
             "name": "I am on the Account Login page",
             "result": {
               "status": "passed",
-              "duration": 527000000
+              "duration": 473000000
             }
           },
           {
@@ -368,7 +368,7 @@
             "name": "I log in with an unregistered e-mail",
             "result": {
               "status": "passed",
-              "duration": 259000000
+              "duration": 343000000
             }
           },
           {
@@ -378,7 +378,7 @@
             "name": "I see the warning \"Warning: No match for E-Mail Address and/or Password.\"",
             "result": {
               "status": "passed",
-              "duration": 124000000
+              "duration": 79000000
             }
           }
         ],
@@ -408,7 +408,7 @@
             "name": "I am a registered customer",
             "result": {
               "status": "passed",
-              "duration": 2324000000
+              "duration": 2195000000
             }
           },
           {
@@ -418,7 +418,7 @@
             "name": "I am on the Account Login page",
             "result": {
               "status": "passed",
-              "duration": 485000000
+              "duration": 384000000
             }
           },
           {
@@ -428,7 +428,7 @@
             "name": "I log in with my e-mail and the password \"WrongPass#123\"",
             "result": {
               "status": "passed",
-              "duration": 328000000
+              "duration": 298000000
             }
           },
           {
@@ -438,7 +438,7 @@
             "name": "I see the warning \"Warning: No match for E-Mail Address and/or Password.\"",
             "result": {
               "status": "passed",
-              "duration": 158000000
+              "duration": 185000000
             }
           }
         ],
@@ -468,7 +468,7 @@
             "name": "I am a registered customer",
             "result": {
               "status": "passed",
-              "duration": 2590000000
+              "duration": 2072000000
             }
           },
           {
@@ -478,7 +478,7 @@
             "name": "I am on the Account Login page",
             "result": {
               "status": "passed",
-              "duration": 621000000
+              "duration": 518000000
             }
           },
           {
@@ -488,7 +488,7 @@
             "name": "I log in with my e-mail and password",
             "result": {
               "status": "passed",
-              "duration": 299000000
+              "duration": 280000000
             }
           },
           {
@@ -498,7 +498,7 @@
             "name": "I log out",
             "result": {
               "status": "passed",
-              "duration": 959000000
+              "duration": 766000000
             }
           },
           {
@@ -508,7 +508,7 @@
             "name": "the page heading is \"Account Logout\"",
             "result": {
               "status": "passed",
-              "duration": 109000000
+              "duration": 130000000
             }
           }
         ],
@@ -558,7 +558,7 @@
             "name": "I am on the product page of \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 1799000000
+              "duration": 1604000000
             }
           },
           {
@@ -568,7 +568,7 @@
             "name": "I add the product to the comparison",
             "result": {
               "status": "passed",
-              "duration": 120000000
+              "duration": 138000000
             }
           },
           {
@@ -578,7 +578,7 @@
             "name": "I see the success message \"Success: You have added iPhone to your product comparison!\"",
             "result": {
               "status": "passed",
-              "duration": 67000000
+              "duration": 151000000
             }
           }
         ],
@@ -612,7 +612,7 @@
             "name": "I open the product comparison page",
             "result": {
               "status": "passed",
-              "duration": 536000000
+              "duration": 442000000
             }
           },
           {
@@ -622,7 +622,7 @@
             "name": "I see the message \"You have not chosen any products to compare.\"",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 19000000
             }
           }
         ],
@@ -667,7 +667,7 @@
             "name": "I have added the following products to the comparison:",
             "result": {
               "status": "passed",
-              "duration": 4539000000
+              "duration": 3956000000
             }
           },
           {
@@ -677,7 +677,7 @@
             "name": "I open the product comparison page",
             "result": {
               "status": "passed",
-              "duration": 493000000
+              "duration": 607000000
             }
           },
           {
@@ -702,7 +702,7 @@
             "name": "the product comparison contains:",
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 59000000
             }
           }
         ],
@@ -747,7 +747,7 @@
             "name": "I have added the following products to the comparison:",
             "result": {
               "status": "passed",
-              "duration": 4306000000
+              "duration": 3730000000
             }
           },
           {
@@ -757,7 +757,7 @@
             "name": "I open the product comparison page",
             "result": {
               "status": "passed",
-              "duration": 573000000
+              "duration": 312000000
             }
           },
           {
@@ -767,7 +767,7 @@
             "name": "I remove \"iPhone\" from the comparison",
             "result": {
               "status": "passed",
-              "duration": 405000000
+              "duration": 320000000
             }
           },
           {
@@ -777,7 +777,7 @@
             "name": "I see the success message \"Success: You have modified your product comparison!\"",
             "result": {
               "status": "passed",
-              "duration": 118000000
+              "duration": 131000000
             }
           },
           {
@@ -807,7 +807,7 @@
             "name": "the product comparison does not contain \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 8000000
             }
           }
         ],
@@ -857,7 +857,7 @@
             "name": "I am on the home page",
             "result": {
               "status": "passed",
-              "duration": 489000000
+              "duration": 343000000
             }
           },
           {
@@ -867,7 +867,7 @@
             "name": "I search for \"MacBook\"",
             "result": {
               "status": "passed",
-              "duration": 507000000
+              "duration": 491000000
             }
           },
           {
@@ -877,7 +877,7 @@
             "name": "I open the product \"MacBook\"",
             "result": {
               "status": "passed",
-              "duration": 882000000
+              "duration": 710000000
             }
           },
           {
@@ -887,7 +887,7 @@
             "name": "the product heading is \"MacBook\"",
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 47000000
             }
           },
           {
@@ -897,7 +897,7 @@
             "name": "the product price is displayed",
             "result": {
               "status": "passed",
-              "duration": 42000000
+              "duration": 32000000
             }
           },
           {
@@ -907,7 +907,7 @@
             "name": "the quantity field and the Add to Cart button are displayed",
             "result": {
               "status": "passed",
-              "duration": 54000000
+              "duration": 41000000
             }
           },
           {
@@ -917,7 +917,7 @@
             "name": "the product tabs \"Description\" and \"Reviews\" are available",
             "result": {
               "status": "passed",
-              "duration": 89000000
+              "duration": 33000000
             }
           }
         ],
@@ -939,39 +939,29 @@
       },
       {
         "description": "",
-        "id": "product-details-page;add-a-product-to-the-cart-with-a-chosen-quantity",
+        "id": "product-details-page;wish-list-and-compare-actions-are-available",
         "keyword": "Scenario",
-        "line": 17,
-        "name": "Add a product to the cart with a chosen quantity",
+        "line": 22,
+        "name": "Wish list and compare actions are available",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 18,
+            "line": 23,
             "name": "I am on the product page of \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 1757000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 19,
-            "name": "I set the quantity to 2 and add the product to the cart",
-            "result": {
-              "status": "passed",
-              "duration": 238000000
+              "duration": 1480000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
-            "name": "I see the success message \"Success: You have added iPhone to your shopping cart!\"",
+            "line": 24,
+            "name": "the \"Add to Wish List\" and \"Compare this Product\" buttons are displayed",
             "result": {
               "status": "passed",
-              "duration": 96000000
+              "duration": 36000000
             }
           }
         ],
@@ -989,29 +979,55 @@
       },
       {
         "description": "",
-        "id": "product-details-page;wish-list-and-compare-actions-are-available",
+        "id": "product-details-page;add-a-product-to-the-cart-with-a-chosen-quantity",
         "keyword": "Scenario",
-        "line": 22,
-        "name": "Wish list and compare actions are available",
+        "line": 17,
+        "name": "Add a product to the cart with a chosen quantity",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 23,
+            "line": 18,
             "name": "I am on the product page of \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 1563000000
+              "duration": 586000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I set the quantity to 2 and add the product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 77000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 24,
-            "name": "the \"Add to Wish List\" and \"Compare this Product\" buttons are displayed",
+            "line": 20,
+            "name": "I see the success message \"Success: You have added iPhone to your shopping cart!\"",
             "result": {
               "status": "passed",
-              "duration": 70000000
+              "duration": 22000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           }
         ],
@@ -1061,7 +1077,7 @@
             "name": "I am on the Register Account page",
             "result": {
               "status": "passed",
-              "duration": 753000000
+              "duration": 428000000
             }
           },
           {
@@ -1071,7 +1087,7 @@
             "name": "I register with valid details and accept the privacy policy",
             "result": {
               "status": "passed",
-              "duration": 490000000
+              "duration": 470000000
             }
           },
           {
@@ -1081,7 +1097,7 @@
             "name": "the page heading is \"Your Account Has Been Created!\"",
             "result": {
               "status": "passed",
-              "duration": 891000000
+              "duration": 571000000
             }
           }
         ],
@@ -1103,6 +1119,56 @@
       },
       {
         "description": "",
+        "id": "customer-registration;registration-requires-accepting-the-privacy-policy",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Registration requires accepting the privacy policy",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I am on the Register Account page",
+            "result": {
+              "status": "passed",
+              "duration": 287000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I register with valid details without accepting the privacy policy",
+            "result": {
+              "status": "passed",
+              "duration": 384000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I see the warning \"Warning: You must agree to the Privacy Policy!\"",
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@registration",
+            "line": 1
+          },
+          {
+            "name": "@IB-13",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "customer-registration;mandatory-registration-fields-are-validated",
         "keyword": "Scenario",
         "line": 24,
@@ -1115,7 +1181,7 @@
             "name": "I am on the Register Account page",
             "result": {
               "status": "passed",
-              "duration": 595000000
+              "duration": 375000000
             }
           },
           {
@@ -1125,7 +1191,7 @@
             "name": "I submit the registration form empty",
             "result": {
               "status": "passed",
-              "duration": 242000000
+              "duration": 205000000
             }
           },
           {
@@ -1170,57 +1236,7 @@
             "name": "I see the following registration field errors:",
             "result": {
               "status": "passed",
-              "duration": 174000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@registration",
-            "line": 1
-          },
-          {
-            "name": "@IB-13",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "customer-registration;registration-requires-accepting-the-privacy-policy",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "Registration requires accepting the privacy policy",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 20,
-            "name": "I am on the Register Account page",
-            "result": {
-              "status": "passed",
-              "duration": 584000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "I register with valid details without accepting the privacy policy",
-            "result": {
-              "status": "passed",
-              "duration": 515000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 22,
-            "name": "I see the warning \"Warning: You must agree to the Privacy Policy!\"",
-            "result": {
-              "status": "passed",
-              "duration": 57000000
+              "duration": 133000000
             }
           }
         ],
@@ -1250,7 +1266,7 @@
             "name": "a customer account already exists",
             "result": {
               "status": "passed",
-              "duration": 2450000000
+              "duration": 1412000000
             }
           },
           {
@@ -1260,7 +1276,7 @@
             "name": "I am on the Register Account page",
             "result": {
               "status": "passed",
-              "duration": 385000000
+              "duration": 366000000
             }
           },
           {
@@ -1270,7 +1286,7 @@
             "name": "I register again with the same e-mail",
             "result": {
               "status": "passed",
-              "duration": 486000000
+              "duration": 370000000
             }
           },
           {
@@ -1280,7 +1296,7 @@
             "name": "I see the warning \"Warning: E-Mail Address is already registered!\"",
             "result": {
               "status": "passed",
-              "duration": 73000000
+              "duration": 76000000
             }
           }
         ],
@@ -1330,7 +1346,7 @@
             "name": "I am on the home page",
             "result": {
               "status": "passed",
-              "duration": 481000000
+              "duration": 279000000
             }
           },
           {
@@ -1340,7 +1356,7 @@
             "name": "I search for \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 649000000
+              "duration": 296000000
             }
           },
           {
@@ -1350,7 +1366,7 @@
             "name": "the search results contain the product \"iPhone\"",
             "result": {
               "status": "passed",
-              "duration": 217000000
+              "duration": 142000000
             }
           }
         ],
@@ -1372,10 +1388,10 @@
       },
       {
         "description": "",
-        "id": "product-search;search-for-a-product-that-does-not-exist",
+        "id": "product-search;a-partial-keyword-returns-every-matching-product",
         "keyword": "Scenario",
-        "line": 20,
-        "name": "Search for a product that does not exist",
+        "line": 15,
+        "name": "A partial keyword returns every matching product",
         "steps": [
           {
             "arguments": [],
@@ -1384,27 +1400,37 @@
             "name": "I am on the home page",
             "result": {
               "status": "passed",
-              "duration": 447000000
+              "duration": 301000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
-            "name": "I search for \"NoSuchProduct12345\"",
+            "line": 16,
+            "name": "I search for \"mac\"",
             "result": {
               "status": "passed",
-              "duration": 553000000
+              "duration": 386000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
-            "name": "I see the message \"There is no product that matches the search criteria.\"",
+            "line": 17,
+            "name": "more than one product is found",
             "result": {
               "status": "passed",
-              "duration": 215000000
+              "duration": 164000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "every product name in the results contains \"mac\"",
+            "result": {
+              "status": "passed",
+              "duration": 100000000
             }
           }
         ],
@@ -1422,10 +1448,10 @@
       },
       {
         "description": "",
-        "id": "product-search;a-partial-keyword-returns-every-matching-product",
+        "id": "product-search;search-for-a-product-that-does-not-exist",
         "keyword": "Scenario",
-        "line": 15,
-        "name": "A partial keyword returns every matching product",
+        "line": 20,
+        "name": "Search for a product that does not exist",
         "steps": [
           {
             "arguments": [],
@@ -1434,37 +1460,27 @@
             "name": "I am on the home page",
             "result": {
               "status": "passed",
-              "duration": 633000000
+              "duration": 256000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
-            "name": "I search for \"mac\"",
+            "line": 21,
+            "name": "I search for \"NoSuchProduct12345\"",
             "result": {
               "status": "passed",
-              "duration": 544000000
+              "duration": 335000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
-            "name": "more than one product is found",
+            "line": 22,
+            "name": "I see the message \"There is no product that matches the search criteria.\"",
             "result": {
               "status": "passed",
-              "duration": 201000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "every product name in the results contains \"mac\"",
-            "result": {
-              "status": "passed",
-              "duration": 148000000
+              "duration": 104000000
             }
           }
         ],
@@ -1502,46 +1518,6 @@
     "elements": [
       {
         "description": "",
-        "id": "shopping-cart;an-empty-cart-shows-an-empty-message",
-        "keyword": "Scenario",
-        "line": 26,
-        "name": "An empty cart shows an empty message",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 27,
-            "name": "I open the shopping cart",
-            "result": {
-              "status": "passed",
-              "duration": 625000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 28,
-            "name": "I see the message \"Your shopping cart is empty!\"",
-            "result": {
-              "status": "passed",
-              "duration": 27000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@cart",
-            "line": 1
-          },
-          {
-            "name": "@IB-17",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
         "id": "shopping-cart;an-added-product-appears-in-the-cart",
         "keyword": "Scenario",
         "line": 8,
@@ -1554,7 +1530,7 @@
             "name": "I have added \"iPhone\" to the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 1874000000
+              "duration": 1399000000
             }
           },
           {
@@ -1564,7 +1540,7 @@
             "name": "I open the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 1359000000
+              "duration": 478000000
             }
           },
           {
@@ -1574,7 +1550,7 @@
             "name": "the shopping cart contains \"iPhone\" with quantity 1",
             "result": {
               "status": "passed",
-              "duration": 67000000
+              "duration": 54000000
             }
           }
         ],
@@ -1608,7 +1584,7 @@
             "name": "I have added \"iPhone\" to the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 2772000000
+              "duration": 1471000000
             }
           },
           {
@@ -1618,7 +1594,7 @@
             "name": "I open the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 461000000
+              "duration": 403000000
             }
           },
           {
@@ -1628,7 +1604,7 @@
             "name": "I change the quantity of \"iPhone\" to 3 and update the cart",
             "result": {
               "status": "passed",
-              "duration": 281000000
+              "duration": 169000000
             }
           },
           {
@@ -1638,7 +1614,7 @@
             "name": "I see the success message \"Success: You have modified your shopping cart!\"",
             "result": {
               "status": "passed",
-              "duration": 56000000
+              "duration": 53000000
             }
           },
           {
@@ -1648,7 +1624,47 @@
             "name": "the shopping cart contains \"iPhone\" with quantity 3",
             "result": {
               "status": "passed",
-              "duration": 129000000
+              "duration": 114000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cart",
+            "line": 1
+          },
+          {
+            "name": "@IB-17",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "shopping-cart;an-empty-cart-shows-an-empty-message",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "An empty cart shows an empty message",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I open the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 338000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I see the message \"Your shopping cart is empty!\"",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
             }
           }
         ],
@@ -1678,7 +1694,7 @@
             "name": "I have added \"iPhone\" to the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 3504000000
+              "duration": 1469000000
             }
           },
           {
@@ -1688,7 +1704,7 @@
             "name": "I open the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 444000000
+              "duration": 354000000
             }
           },
           {
@@ -1698,7 +1714,7 @@
             "name": "I remove \"iPhone\" from the shopping cart",
             "result": {
               "status": "passed",
-              "duration": 106000000
+              "duration": 99000000
             }
           },
           {
@@ -1708,7 +1724,7 @@
             "name": "I see the message \"Your shopping cart is empty!\"",
             "result": {
               "status": "passed",
-              "duration": 215000000
+              "duration": 259000000
             }
           }
         ],
@@ -1758,7 +1774,7 @@
             "name": "I am not logged in",
             "result": {
               "status": "passed",
-              "duration": 652000000
+              "duration": 313000000
             }
           },
           {
@@ -1768,7 +1784,7 @@
             "name": "I add \"iPhone\" to my wish list",
             "result": {
               "status": "passed",
-              "duration": 1736000000
+              "duration": 608000000
             }
           },
           {
@@ -1778,7 +1794,7 @@
             "name": "I see the message \"You must login or create an account to save iPhone to your wish list!\"",
             "result": {
               "status": "passed",
-              "duration": 64000000
+              "duration": 32000000
             }
           }
         ],
@@ -1812,6 +1828,100 @@
     "uri": "features/wishlist.feature"
   },
   {
+    "description": "  As a shopper\n  I want to check out the products in my cart\n  So that I can place an order",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkout;a-logged-in-customer-reaches-checkout-without-the-account-step",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "A logged-in customer reaches checkout without the account step",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I am logged in",
+            "result": {
+              "status": "passed",
+              "duration": 742000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I have added \"MacBook\" to the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 1647000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I proceed to checkout",
+            "result": {
+              "status": "passed",
+              "duration": 732000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the page heading is \"Checkout\"",
+            "result": {
+              "status": "passed",
+              "duration": 36000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "the guest checkout option is not offered",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 1
+          },
+          {
+            "name": "@IB-20",
+            "line": 1
+          },
+          {
+            "name": "@auth",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "chromium-auth-›-checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Checkout",
+    "tags": [
+      {
+        "name": "@checkout",
+        "line": 1
+      },
+      {
+        "name": "@IB-20",
+        "line": 1
+      }
+    ],
+    "uri": "features/checkout.feature"
+  },
+  {
     "description": "  As a registered customer\n  I want to save products to my wish list\n  So that I can come back and buy them later",
     "elements": [
       {
@@ -1828,7 +1938,7 @@
             "name": "I am logged in",
             "result": {
               "status": "passed",
-              "duration": 976000000
+              "duration": 1041000000
             }
           },
           {
@@ -1838,7 +1948,7 @@
             "name": "I add \"MacBook\" to my wish list",
             "result": {
               "status": "passed",
-              "duration": 1408000000
+              "duration": 1491000000
             }
           },
           {
@@ -1848,7 +1958,7 @@
             "name": "I see the success message \"Success: You have added MacBook to your wish list!\"",
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 38000000
             }
           },
           {
@@ -1858,7 +1968,7 @@
             "name": "my wish list contains \"MacBook\"",
             "result": {
               "status": "passed",
-              "duration": 845000000
+              "duration": 666000000
             }
           }
         ],
@@ -1896,7 +2006,7 @@
             "name": "I am logged in",
             "result": {
               "status": "passed",
-              "duration": 1041000000
+              "duration": 819000000
             }
           },
           {
@@ -1906,7 +2016,7 @@
             "name": "\"HTC Touch HD\" is in my wish list",
             "result": {
               "status": "passed",
-              "duration": 2491000000
+              "duration": 2377000000
             }
           },
           {
@@ -1916,7 +2026,7 @@
             "name": "I remove \"HTC Touch HD\" from my wish list",
             "result": {
               "status": "passed",
-              "duration": 369000000
+              "duration": 409000000
             }
           },
           {
@@ -1926,7 +2036,7 @@
             "name": "my wish list does not contain \"HTC Touch HD\"",
             "result": {
               "status": "passed",
-              "duration": 331000000
+              "duration": 283000000
             }
           }
         ],
@@ -1962,99 +2072,5 @@
       }
     ],
     "uri": "features/wishlist.feature"
-  },
-  {
-    "description": "  As a shopper\n  I want to check out the products in my cart\n  So that I can place an order",
-    "elements": [
-      {
-        "description": "",
-        "id": "checkout;a-logged-in-customer-reaches-checkout-without-the-account-step",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "A logged-in customer reaches checkout without the account step",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 20,
-            "name": "I am logged in",
-            "result": {
-              "status": "passed",
-              "duration": 1130000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
-            "name": "I have added \"MacBook\" to the shopping cart",
-            "result": {
-              "status": "passed",
-              "duration": 1542000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 22,
-            "name": "I proceed to checkout",
-            "result": {
-              "status": "passed",
-              "duration": 644000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 23,
-            "name": "the page heading is \"Checkout\"",
-            "result": {
-              "status": "passed",
-              "duration": 68000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "the guest checkout option is not offered",
-            "result": {
-              "status": "passed",
-              "duration": 23000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@checkout",
-            "line": 1
-          },
-          {
-            "name": "@IB-20",
-            "line": 1
-          },
-          {
-            "name": "@auth",
-            "line": 18
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "chromium-auth-›-checkout",
-    "line": 2,
-    "keyword": "Feature",
-    "name": "Checkout",
-    "tags": [
-      {
-        "name": "@checkout",
-        "line": 1
-      },
-      {
-        "name": "@IB-20",
-        "line": 1
-      }
-    ],
-    "uri": "features/checkout.feature"
   }
 ]
