@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-25T09:56:32.953Z",
+  "generatedAt": "2026-11-26T09:40:08.631Z",
   "target": "http://localhost:8080",
-  "runUrl": "https://github.com/EbrahimSalem1/Ai-QA-Autonomous-System-Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript/actions/runs/45589721115",
+  "runUrl": "https://github.com/EbrahimSalem1/Ai-QA-Autonomous-System-Migration-From-Selenium-Java-Framework-To-Playwright-TypeScript/actions/runs/45793653431",
   "totals": {
-    "passed": 29,
+    "passed": 28,
     "failed": 0,
-    "skipped": 0,
+    "skipped": 1,
     "scenarios": 29,
-    "durationMs": 64618
+    "durationMs": 62047
   },
   "modules": [
     {
@@ -18,12 +18,12 @@
       "passed": 4,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 15740,
+      "durationMs": 16549,
       "scenarios": [
         {
           "name": "Checkout with an empty cart returns to the shopping cart",
           "status": "passed",
-          "durationMs": 707,
+          "durationMs": 699,
           "tags": [
             "@checkout",
             "@IB-20"
@@ -32,7 +32,7 @@
         {
           "name": "The order cannot be confirmed until the terms and conditions are accepted",
           "status": "passed",
-          "durationMs": 5961,
+          "durationMs": 5998,
           "tags": [
             "@checkout",
             "@IB-20"
@@ -41,7 +41,7 @@
         {
           "name": "Guest checkout places an order",
           "status": "passed",
-          "durationMs": 6133,
+          "durationMs": 6644,
           "tags": [
             "@checkout",
             "@IB-20",
@@ -52,7 +52,7 @@
         {
           "name": "A logged-in customer reaches checkout without the account step",
           "status": "passed",
-          "durationMs": 2939,
+          "durationMs": 3208,
           "tags": [
             "@checkout",
             "@IB-20",
@@ -69,12 +69,12 @@
       "passed": 4,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 9831,
+      "durationMs": 10466,
       "scenarios": [
         {
           "name": "Login with valid credentials",
           "status": "passed",
-          "durationMs": 2477,
+          "durationMs": 3348,
           "tags": [
             "@login",
             "@IB-14",
@@ -84,7 +84,7 @@
         {
           "name": "Login is rejected for an unregistered e-mail",
           "status": "passed",
-          "durationMs": 760,
+          "durationMs": 954,
           "tags": [
             "@login",
             "@IB-14"
@@ -93,7 +93,7 @@
         {
           "name": "Login is rejected for a wrong password",
           "status": "passed",
-          "durationMs": 2845,
+          "durationMs": 2868,
           "tags": [
             "@login",
             "@IB-14"
@@ -102,7 +102,7 @@
         {
           "name": "Logout from the account",
           "status": "passed",
-          "durationMs": 3749,
+          "durationMs": 3296,
           "tags": [
             "@login",
             "@IB-14"
@@ -115,15 +115,15 @@
       "tag": "@compare",
       "jira": "IB-19",
       "feature": "product-compare.feature",
-      "passed": 4,
+      "passed": 3,
       "failed": 0,
-      "skipped": 0,
-      "durationMs": 10872,
+      "skipped": 1,
+      "durationMs": 8105,
       "scenarios": [
         {
           "name": "Add a product to the comparison",
           "status": "passed",
-          "durationMs": 1649,
+          "durationMs": 1690,
           "tags": [
             "@compare",
             "@IB-19",
@@ -133,7 +133,7 @@
         {
           "name": "An empty comparison shows an empty message",
           "status": "passed",
-          "durationMs": 503,
+          "durationMs": 505,
           "tags": [
             "@compare",
             "@IB-19"
@@ -142,7 +142,7 @@
         {
           "name": "Compare two products side by side",
           "status": "passed",
-          "durationMs": 4285,
+          "durationMs": 4465,
           "tags": [
             "@compare",
             "@IB-19"
@@ -150,8 +150,8 @@
         },
         {
           "name": "Remove a product from the comparison",
-          "status": "passed",
-          "durationMs": 4435,
+          "status": "skipped",
+          "durationMs": 1445,
           "tags": [
             "@compare",
             "@IB-19"
@@ -167,12 +167,12 @@
       "passed": 3,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 5133,
+      "durationMs": 5346,
       "scenarios": [
         {
           "name": "Product information is shown",
           "status": "passed",
-          "durationMs": 1784,
+          "durationMs": 1812,
           "tags": [
             "@product",
             "@IB-16",
@@ -182,7 +182,7 @@
         {
           "name": "Add a product to the cart with a chosen quantity",
           "status": "passed",
-          "durationMs": 1843,
+          "durationMs": 2440,
           "tags": [
             "@product",
             "@IB-16"
@@ -191,7 +191,7 @@
         {
           "name": "Wish list and compare actions are available",
           "status": "passed",
-          "durationMs": 1506,
+          "durationMs": 1094,
           "tags": [
             "@product",
             "@IB-16"
@@ -207,12 +207,12 @@
       "passed": 4,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 5358,
+      "durationMs": 4592,
       "scenarios": [
         {
           "name": "Register a new account with valid details",
           "status": "passed",
-          "durationMs": 1285,
+          "durationMs": 1190,
           "tags": [
             "@registration",
             "@IB-13",
@@ -220,18 +220,18 @@
           ]
         },
         {
-          "name": "Registration requires accepting the privacy policy",
+          "name": "Mandatory registration fields are validated",
           "status": "passed",
-          "durationMs": 644,
+          "durationMs": 579,
           "tags": [
             "@registration",
             "@IB-13"
           ]
         },
         {
-          "name": "Mandatory registration fields are validated",
+          "name": "Registration requires accepting the privacy policy",
           "status": "passed",
-          "durationMs": 771,
+          "durationMs": 729,
           "tags": [
             "@registration",
             "@IB-13"
@@ -240,7 +240,7 @@
         {
           "name": "Registration is rejected for an e-mail that is already registered",
           "status": "passed",
-          "durationMs": 2658,
+          "durationMs": 2094,
           "tags": [
             "@registration",
             "@IB-13"
@@ -256,12 +256,12 @@
       "passed": 3,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 3001,
+      "durationMs": 2661,
       "scenarios": [
         {
           "name": "Search for an existing product",
           "status": "passed",
-          "durationMs": 855,
+          "durationMs": 826,
           "tags": [
             "@search",
             "@IB-15",
@@ -271,7 +271,7 @@
         {
           "name": "A partial keyword returns every matching product",
           "status": "passed",
-          "durationMs": 1059,
+          "durationMs": 1068,
           "tags": [
             "@search",
             "@IB-15"
@@ -280,7 +280,7 @@
         {
           "name": "Search for a product that does not exist",
           "status": "passed",
-          "durationMs": 1087,
+          "durationMs": 767,
           "tags": [
             "@search",
             "@IB-15"
@@ -296,21 +296,12 @@
       "passed": 4,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 7347,
+      "durationMs": 6781,
       "scenarios": [
-        {
-          "name": "An empty cart shows an empty message",
-          "status": "passed",
-          "durationMs": 611,
-          "tags": [
-            "@cart",
-            "@IB-17"
-          ]
-        },
         {
           "name": "An added product appears in the cart",
           "status": "passed",
-          "durationMs": 2059,
+          "durationMs": 1849,
           "tags": [
             "@cart",
             "@IB-17",
@@ -320,7 +311,16 @@
         {
           "name": "Update the quantity of a product in the cart",
           "status": "passed",
-          "durationMs": 2260,
+          "durationMs": 2235,
+          "tags": [
+            "@cart",
+            "@IB-17"
+          ]
+        },
+        {
+          "name": "An empty cart shows an empty message",
+          "status": "passed",
+          "durationMs": 421,
           "tags": [
             "@cart",
             "@IB-17"
@@ -329,7 +329,7 @@
         {
           "name": "Remove a product from the cart",
           "status": "passed",
-          "durationMs": 2417,
+          "durationMs": 2276,
           "tags": [
             "@cart",
             "@IB-17"
@@ -345,12 +345,12 @@
       "passed": 3,
       "failed": 0,
       "skipped": 0,
-      "durationMs": 7336,
+      "durationMs": 7547,
       "scenarios": [
         {
           "name": "A guest is asked to log in before saving to the wish list",
           "status": "passed",
-          "durationMs": 1067,
+          "durationMs": 756,
           "tags": [
             "@wishlist",
             "@IB-18"
@@ -359,7 +359,7 @@
         {
           "name": "Add a product to the wish list",
           "status": "passed",
-          "durationMs": 2739,
+          "durationMs": 2957,
           "tags": [
             "@wishlist",
             "@IB-18",
@@ -370,7 +370,7 @@
         {
           "name": "Remove a product from the wish list",
           "status": "passed",
-          "durationMs": 3530,
+          "durationMs": 3834,
           "tags": [
             "@wishlist",
             "@IB-18",
